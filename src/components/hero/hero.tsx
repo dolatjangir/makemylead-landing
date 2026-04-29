@@ -31,9 +31,9 @@ function Hero() {
               <div className="relative w-full h-full  px-[var(--space-4)] sm:px-[var(--space-6)] lg:px-[var(--space-8)]">
                 <div className="grid sm:grid-cols-2   items-center">
                   <div className="space-y-[var(--space-4)]">
-                    <div className="inline-flex items-center gap-[var(--space-2)] px-[var(--space-2)] py-[var(--space-2)] rounded-[var(--radius-full)] bg-[var(--color-primary-100)] text-[var(--color-primary-700)] text-sm font-semibold">
+                    <div className="inline-flex items-center gap-[var(--space-2)] px-[var(--space-2)] py-[var(--space-2)] rounded-[var(--radius-full)] bg-[var(--color-primary-100)] text-[var(--color-primary-700)] text-xs sm:text-sm font-semibold">
                       <Sparkles className="w-4 h-4" />
-                      <span>Helping 10,000+ property managers grow faster</span>
+                   <span>Helping 10,000+ businesses generate more leads & grow faster</span>
                     </div>
                     
                     <h1 className="text-4xl lg:text-6xl font-bold leading-tight tracking-tight text-white ">

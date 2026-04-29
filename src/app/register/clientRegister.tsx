@@ -49,7 +49,7 @@ const Register = () => {
         {/* LOGO */}
         <Link href="/" className="absolute top-4 left-4 sm:top-6 sm:left-8 z-10">
           <img 
-            src="/assets/estateai.png" 
+            src="/assets/makemylead-logo.png" 
             alt="EstateAI"
             className="w-32 sm:w-40 md:w-48 lg:w-52 h-auto"
           />
