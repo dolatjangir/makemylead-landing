@@ -6,7 +6,11 @@ import { generateSEOMetadata } from '../../lib/seometadata';
 export const generateMetadata = generateSEOMetadata;
 const StayPilotLanding = () => {
   
-  return <Home />
+  return (
+    <div>
+    hello world!
+    </div>
+  )
    
   
 };
