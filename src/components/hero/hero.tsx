@@ -24,7 +24,7 @@ function Hero() {
   return (
     <div>
          {/* Hero Section */}
-            <section className="relative mt-12 pt-28 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+            <section className="relative mt-12 pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
               <div className="absolute inset-0 bg-[url('/assets/makemylead-hero.webp')] sm:bg-[url('/assets/makemylead-hero.webp')] bg-center bg-cover lg:h-screen after:bg-slate-900/10 after:absolute after:top-0 after:left-0 after:w-full after:h-full bg-no-repeat " />
               <div className="absolute top-0 right-0 w-1/2 h-full  to-transparent " />
               
@@ -49,12 +49,9 @@ function Hero() {
           <span
             className="italic"
             style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontWeight: 700,
-              background: "linear-gradient(-90deg, #c084fc, #f472b6, #fb923c)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
+             fontFamily: "'Playfair Display', Georgia",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.12,
             }}
           >
             Close More Deals
