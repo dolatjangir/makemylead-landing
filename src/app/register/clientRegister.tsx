@@ -38,8 +38,8 @@ const Register = () => {
 
   return (
     <div 
-      className="min-h-screen w-full bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('https://res.cloudinary.com/djipgt6vc/image/upload/v1774335586/login-bg_myf3hh.png')" }}
+      className="min-h-screen w-full bg-cover bg-center bg-no-repeat sm:bg-[url('https://res.cloudinary.com/djipgt6vc/image/upload/v1774335586/login-bg_myf3hh.png')] bg-[url('https://res.cloudinary.com/djipgt6vc/image/upload/v1774335568/login-bg1_tg2ma5.png')] relative"
+      
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-slate-900/10 pointer-events-none" />
@@ -50,20 +50,20 @@ const Register = () => {
         <Link href="/" className="absolute top-4 left-4 sm:top-6 sm:left-8 z-10">
           <img 
             src="/assets/makemylead-logo.png" 
-            alt="EstateAI"
-            className="w-32 sm:w-40 md:w-48 lg:w-52 h-auto"
+            alt="MakeMyLead"
+            className="w-52 sm:w-40 md:w-48 lg:w-52 h-auto"
           />
         </Link>
 
         {/* MAIN */}
-        <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen py-20 sm:py-24 lg:py-0">
+        <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 h-screen py-20 sm:py-24 lg:py-0">
           <Toaster />
 
           <div className="w-full max-w-5xl flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12">
 
             {/* LEFT CARD */}
             <div
-              className="w-full max-w-sm sm:max-w-md lg:max-w-md text-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl sm:ml-16 lg:ml-26"
+              className="w-full min-h-[80vh] sm:min-h-0 max-w-sm sm:max-w-md lg:max-w-md text-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl mt-16 sm:mt-0 sm:ml-16 lg:ml-26"
               style={{
                 background:
                   "linear-gradient(160deg, #0b2a4a 0%, #0d3561 60%, #0a2440 100%)",
@@ -76,7 +76,7 @@ const Register = () => {
               </h2>
 
               <h1 className="text-lg sm:text-xl font-black mb-5 sm:mb-7">
-                Join EstateAI Platform
+                Join MakeMyLead Platform
               </h1>
 
               <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
@@ -140,7 +140,7 @@ const Register = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-black uppercase hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 transition-all"
+                  className="w-full mt-4 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-black uppercase hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 transition-all"
                   style={{
                     background: "linear-gradient(90deg, #1e88e5, #29b6f6)",
                     boxShadow: "0 0 24px rgba(30, 136, 229, 0.6), 0 4px 15px rgba(41, 182, 246, 0.4)",
@@ -150,22 +150,7 @@ const Register = () => {
                 </button>
               </form>
 
-              {/* SOCIAL */}
-              <div className="text-center mt-4 sm:mt-6 text-gray-400 text-xs sm:text-sm">
-                Or sign up with:
-              </div>
-
-              <div className="flex justify-center gap-4 sm:gap-6 mt-3 sm:mt-4">
-                <button className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 flex items-center justify-center hover:scale-110 transition border border-white/10">
-                  <FaGoogle className="text-lg sm:text-xl" style={{ color: "#4285F4" }} />
-                </button>
-                <button className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 flex items-center justify-center hover:scale-110 transition border border-white/10">
-                  <FaGithub className="text-lg sm:text-xl text-white" />
-                </button>
-                <button className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 flex items-center justify-center hover:scale-110 transition border border-white/10">
-                  <FaCog className="text-lg sm:text-xl" style={{ color: "#90caf9" }} />
-                </button>
-              </div>
+          
 
               <div className="text-center mt-4 sm:mt-6 text-gray-400 text-xs sm:text-sm">
                 Already have an account?{" "}
@@ -186,7 +171,7 @@ const Register = () => {
               </div>
 
               <p className="text-[#1a3a5c] text-base xl:text-lg max-w-sm px-4 leading-relaxed font-medium">
-                Create your AI-powered real estate workspace and manage leads,
+                Create your AI-powered real makemylead workspace and manage leads,
                 automation, and deals smarter.
               </p>
             </div>

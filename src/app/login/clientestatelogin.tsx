@@ -67,20 +67,20 @@ const LoginEstate = () => {
     <Link href="/" className="absolute top-4 left-4 sm:top-6 sm:left-8 z-10">
       <img
         src="/assets/makemylead-logo.png"
-        alt="EstateAI"
+        alt="MakeMyLead"
         className="w-58 sm:w-40 md:w-48 lg:w-52 h-auto"
       />
     </Link>
 
     {/* MAIN */}
-    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen py-20 sm:py-24 lg:py-0">
+    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 h-screen py-20 sm:py-24 lg:py-0">
       <Toaster />
 
       <div className="w-full max-w-5xl flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-16">
 
         {/* LEFT CARD - Full screen on mobile */}
         <div
-    className="w-full min-h-[50vh] sm:min-h-0 py-0 px-6 sm:max-w-md lg:max-w-md text-white sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl sm:ml-16 lg:ml-26"
+    className="w-full min-h-[50vh] sm:min-h-0 py-0 px-6 sm:max-w-md lg:max-w-md text-white sm:p-8 rounded-2xl sm:rounded-3xl shadow-2xl mt-16 sm:mt-0 sm:ml-16 lg:ml-26"
     style={{
       background: "linear-gradient(160deg, #0b2a4a 0%, #0d3561 60%, #0a2440 100%)",
       boxShadow: "0 25px 60px rgba(13, 46, 94, 0.4), 0 0 0 1px rgba(255,255,255,0.05)",
@@ -145,21 +145,7 @@ const LoginEstate = () => {
           </form>
 
           {/* SOCIAL */}
-          <div className="text-center text-gray-400 text-sm">
-            Or sign up with:
-          </div>
-
-          <div className="flex justify-center gap-6 mt-4">
-            <button className="w-12 h-12 sm:w-11 sm:h-11 rounded-full bg-white/10 flex items-center justify-center hover:scale-110 transition border border-white/10">
-              <FaGoogle className="text-xl" style={{ color: "#4285F4" }} />
-            </button>
-            <button className="w-12 h-12 sm:w-11 sm:h-11 rounded-full bg-white/10 flex items-center justify-center hover:scale-110 transition border border-white/10">
-              <FaGithub className="text-xl text-white" />
-            </button>
-            <button className="w-12 h-12 sm:w-11 sm:h-11 rounded-full bg-white/10 flex items-center justify-center hover:scale-110 transition border border-white/10">
-              <FaCog className="text-xl" style={{ color: "#90caf9" }} />
-            </button>
-          </div>
+        
 
           <div className="text-center mt-5 sm:mt-6 text-gray-400 text-sm">
             Don't have an account?{" "}
@@ -183,7 +169,7 @@ const LoginEstate = () => {
           </div>
 
           <p className="text-[#1a3a5c] text-base xl:text-lg max-w-sm px-4 leading-relaxed font-medium">
-            Create your AI-powered real estate workspace and manage leads,
+            Create your AI-powered real makemylead workspace and manage leads,
             automation, and deals smarter.
           </p>
         </div>

@@ -36,16 +36,33 @@ function Hero() {
                    <span>Helping 10,000+ businesses generate more leads & grow faster</span>
                     </div>
                     
-                    <h1 className="text-4xl lg:text-6xl font-bold leading-tight tracking-tight text-white ">
-                      Get More Leads and Close More Deals{" "}
-                      <span className="bg-white bg-clip-text text-transparent">
-                   
-                      </span>
-                      
-                    </h1>
+                      <h1
+          className="m-0 text-4xl font-black leading-tight text-white lg:text-6xl"
+          style={{
+            fontFamily: "'Playfair Display', Georgia",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.12,
+          }}
+        >
+          Get More Leads &amp;
+          <br />
+          <span
+            className="italic"
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontWeight: 700,
+              background: "linear-gradient(-90deg, #c084fc, #f472b6, #fb923c)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Close More Deals
+          </span>
+        </h1>
                     
                     <p className="text-xl text-[var(--color-secondary-50)] leading-relaxed max-w-xl">
-                   Capture enquiries, match the right buyers, follow up on time, and close deals faster — all in one simple system.
+                   Capture enquiries, match the right buyers, follow up on time, and close deals faster — all in one AI system.
                     </p>
       
                     <div className="flex flex-col sm:flex-row gap-[var(--space-4)]">
@@ -61,7 +78,7 @@ function Hero() {
                       </button></Link> */}
                     </div>
       
-                    <div className="flex items-center gap-[var(--space-6)] pt-[var(--space-4)]">
+                    <div className="flex sm:items-center flex-col sm:flex-row sm:gap-[var(--space-6)] sm:pt-[var(--space-4)]">
                       <div className="flex -space-x-[var(--space-3)]">
                         {topUsers.map((user) => (
                           <img key={user.id} src={user.avatar} alt={user.name} className="w-10 h-10 rounded-full border-2 border-[var(--color-primary-100)] bg-[var(--color-primary-50)]" />
@@ -71,12 +88,12 @@ function Hero() {
                 </div>
                       </div>
                       <div>
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center hidden sm:flex ml-4  sm:ml-0 gap-1">
                           {[1,2,3,4,5].map((i) => (
                             <Star key={i} className="w-4 h-4 fill-[var(--color-warning-500)] text-[var(--color-warning-500)]" />
                           ))}
                         </div>
-                        <p className="text-sm text-white">Loved by 2,000+ property professionals</p>
+                        <p className="text-sm ml-4 sm:ml-0 text-white">Loved by 2,000+ leads professional</p>
                       </div>
                     </div>
                   </div>
