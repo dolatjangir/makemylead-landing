@@ -109,13 +109,13 @@ const HeroSection: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary-100)] border border-[var(--color-primary-200)] mb-8 animate-fade-in">
             <Sparkles className="w-4 h-4 text-[var(--color-primary-600)]" />
-            <span className="text-sm font-semibold text-[var(--color-primary-700)]">Automate everything. Scale effortlessly.</span>
+            <span className="text-sm font-semibold text-[var(--color-primary-700)]">Generate leads. Nurture automatically. Close faster.</span>
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[var(--color-primary-900)] tracking-tight mb-6 leading-tight">
-            Run Your Real Estate Business on{' '}
+           Generate & Convert Leads on {' '}
             <span className="relative inline-block">
-              <span className="relative z-10 text-[var(--color-primary-600)]">Autopilot</span>
+              <span className="relative z-10 text-[var(--color-primary-600)]">makemylead</span>
               <svg className="absolute -bottom-2 left-0 w-full h-4 text-[var(--color-primary-200)] -z-0" viewBox="0 0 200 8" preserveAspectRatio="none">
                 <path d="M0,4 Q100,0 200,4" stroke="currentColor" strokeWidth="8" fill="none" />
               </svg>
@@ -123,8 +123,8 @@ const HeroSection: React.FC = () => {
           </h1>
           
           <p className="text-xl lg:text-2xl text-[var(--color-primary-800)]/70 leading-relaxed max-w-2xl mx-auto mb-10">
-            Deploy AI agents that handle lead qualification, follow-ups, property matching, and client communication—24/7. 
-            Eliminate manual work and scale your operations without adding headcount.
+          Capture, qualify, and convert high-quality leads on autopilot. Our AI-driven system 
+          handles follow-ups, nurturing, and engagement—so you never miss a potential customer.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -176,43 +176,43 @@ const FeaturesSection: React.FC = () => {
   const features = [
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Smart Workflow Automation",
-      description: "Build complex, multi-step workflows that trigger based on lead behavior, time delays, or custom conditions—no code needed.",
+      title: "Smart Lead Capture",
+    description: "Automatically collect leads from websites, landing pages, ads, and forms in real-time.",
       color: "from-[var(--color-primary-500)] to-[var(--color-primary-600)]",
       badge: "Visual Builder"
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
-      title: "AI-Powered Follow-Ups",
-      description: "Intelligent email, SMS, and voice sequences that adapt messaging based on lead responses and engagement patterns.",
+        title: "Automated Follow-Ups",
+    description: "Send emails, SMS, and messages instantly to engage and nurture leads without manual effort.",
       color: "from-[var(--color-secondary-500)] to-[var(--color-secondary-600)]",
       badge: "Adaptive"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Automated Lead Qualification",
-      description: "AI agents ask qualifying questions, score leads in real-time, and route hot prospects to your team instantly.",
+        title: "Lead Qualification",
+    description: "Identify high-quality prospects with AI scoring and focus only on leads that matter.",
       color: "from-[var(--color-primary-400)] to-[var(--color-primary-500)]",
       badge: "Real-time"
     },
     {
       icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Task Automation",
-      description: "Auto-create tasks, schedule appointments, update CRM records, and notify team members based on deal progression.",
+       title: "CRM Automation",
+    description: "Automatically update lead data, assign tasks, and manage pipelines without manual work.",
       color: "from-[var(--color-secondary-400)] to-[var(--color-secondary-500)]",
       badge: "Zero-touch"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Trigger-Based Actions",
-      description: "Set up intelligent triggers that execute actions when leads visit properties, open emails, or hit specific milestones.",
+     title: "Behavior-Based Triggers",
+    description: "Trigger actions when users click, visit, or interact with your content.",
       color: "from-[var(--color-primary-600)] to-[var(--color-primary-700)]",
       badge: "Event-driven"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "24/7 AI Agents",
-      description: "Always-on virtual agents handle inquiries, book showings, and nurture leads while you sleep, vacation, or close deals.",
+         title: "24/7 Lead Engagement",
+    description: "Never miss a lead with always-on AI responding instantly—even while you sleep.",
       color: "from-[var(--color-secondary-600)] to-[var(--color-secondary-700)]",
       badge: "Always-on"
     }
@@ -477,7 +477,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Save 20+ Hours Weekly",
-      description: "Eliminate repetitive tasks like data entry, follow-ups, and lead routing. Your AI agents handle the busywork while you focus on high-value activities.",
+      description: "Save hours by automating lead capture, follow-ups, and responses.",
       stat: "20h",
       statLabel: "saved per week",
       details: ["Auto-data entry", "Smart scheduling", "Instant responses"]
@@ -485,7 +485,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "3x Higher Conversion Rates",
-      description: "AI-powered follow-ups and instant qualification ensure no lead falls through the cracks. Convert more inquiries into signed contracts.",
+      description: "Convert more leads with instant response and smart nurturing.",
       stat: "3x",
       statLabel: "more conversions",
       details: ["Instant response", "Perfect timing", "Personalized outreach"]
@@ -493,7 +493,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Scale Without Hiring",
-      description: "Handle 10x more leads without adding headcount. AI agents work 24/7, never call in sick, and maintain consistent quality at any volume.",
+      description: "Handle more leads without increasing your team size.",
       stat: "10x",
       statLabel: "lead capacity",
       details: ["24/7 coverage", "Zero overhead", "Consistent quality"]
@@ -501,7 +501,7 @@ const BenefitsSection: React.FC = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Zero Manual Errors",
-      description: "Automated data capture and workflow execution eliminate human error. Every lead is tracked, scored, and nurtured perfectly every time.",
+      description: "Automate your process with accuracy and consistency.",
       stat: "99.9%",
       statLabel: "accuracy",
       details: ["Perfect tracking", "Auto-scoring", "Error-free execution"]
@@ -520,7 +520,7 @@ const BenefitsSection: React.FC = () => {
             Work Smarter, Not Harder
           </h2>
           <p className="text-lg text-[var(--color-primary-700)]/70">
-            Real results that transform your real estate business
+          Real results that grow your lead generation pipeline
           </p>
         </div>
 
@@ -571,29 +571,29 @@ const WorkflowSection: React.FC = () => {
   const steps = [
     {
       number: "01",
-      title: "Capture Data",
-      description: "AI agents automatically collect lead information from every channel—forms, calls, emails, ads, and partner sites—in real-time.",
+      title: "Capture Leads",
+    description: "Collect leads from ads, landing pages, and forms automatically.",
       icon: <Target className="w-6 h-6" />,
       color: "from-[var(--color-primary-400)] to-[var(--color-primary-600)]"
     },
     {
       number: "02",
-      title: "Trigger Workflows",
-      description: "Intelligent rules detect lead behavior, scores, and milestones to automatically trigger the right sequence of actions.",
+       title: "Qualify Leads",
+    description: "AI analyzes and scores leads to find high-intent prospects.",
       icon: <Zap className="w-6 h-6" />,
       color: "from-[var(--color-secondary-400)] to-[var(--color-secondary-600)]"
     },
     {
       number: "03",
-      title: "Execute Actions",
-      description: "AI agents perform tasks instantly: send emails, update CRMs, schedule meetings, notify agents, and qualify leads.",
+     title: "Nurture Automatically",
+    description: "Send follow-ups and engage leads through email, SMS, and chat.",
       icon: <Bot className="w-6 h-6" />,
       color: "from-[var(--color-primary-500)] to-[var(--color-primary-700)]"
     },
     {
       number: "04",
-      title: "Deliver Results",
-      description: "Track performance in real-time. Watch conversion rates climb as your AI handles the heavy lifting 24/7.",
+      title: "Convert & Grow",
+    description: "Turn leads into paying customers and scale your business faster.",
       icon: <BarChart3 className="w-6 h-6" />,
       color: "from-[var(--color-secondary-500)] to-[var(--color-secondary-700)]"
     }
@@ -685,11 +685,10 @@ const CTASection: React.FC = () => {
         </div>
 
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Let AI Handle the Work While You Close More Deals
+         Turn More Visitors Into Qualified Leads Automatically
         </h2>
         <p className="text-xl text-[var(--color-primary-100)] mb-10 max-w-2xl mx-auto">
-          Join 3,000+ real estate professionals who have transformed their business with intelligent automation. 
-          Start your free trial today.
+           Start generating high-quality leads on autopilot. Capture, nurture, and convert—without manual effort.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

@@ -212,74 +212,113 @@ const icons = {
 const steps = [
   {
     num: "01",
-    icon: "🌐",
-    title: "Multi-Source Scanning",
-    desc: "AI agents continuously scan websites, social platforms, databases, and APIs to identify relevant business data and lead signals.",
+    icon: "🎯",
+    title: "Target Audience Research",
+    desc: "We identify your ideal customers, analyze their behavior, and build a strategy to attract high-quality leads.",
   },
   {
     num: "02",
-    icon: "⚡",
-    title: "Intelligent Extraction",
-    desc: "Deep extraction of lead data, contact information, company insights, and behavioral signals with 99.2% accuracy.",
+    icon: "📢",
+    title: "Campaign Launch",
+    desc: "We run highly targeted ads across Google, Facebook, and other platforms to capture attention and generate leads.",
   },
   {
     num: "03",
-    icon: "✨",
-    title: "Clean & Structure",
-    desc: "Automatically deduplicates, normalizes, and enriches raw data into structured, CRM-ready lead profiles.",
+    icon: "📄",
+    title: "Lead Capture Funnels",
+    desc: "Optimized landing pages and funnels convert visitors into qualified leads with high conversion rates.",
   },
   {
     num: "04",
-    icon: "📤",
-    title: "Deliver to Your CRM",
-    desc: "Push verified, high-intent leads directly into your CRM, sales pipeline, or custom workflow — no manual work needed.",
+    icon: "📈",
+    title: "Optimization & Scaling",
+    desc: "We continuously analyze and optimize campaigns to improve ROI and scale your lead generation.",
   },
 ];
 
 const features = [
-  { icon: icons.extraction, title: "Smart Data Extraction", desc: "Scrapes and parses structured data from any source — HTML, JSON feeds, PDFs, and dynamic JavaScript pages." },
-  { icon: icons.realtime, title: "Real-Time Lead Discovery", desc: "Continuously monitors the web for new leads matching your ideal customer profile and delivers instant alerts." },
-  { icon: icons.clean, title: "Automated Data Cleaning", desc: "Deduplication, validation, and normalization pipelines ensure every lead record is accurate and actionable." },
-  { icon: icons.integrate, title: "Multi-Source Integration", desc: "Connects to 50+ data sources including LinkedIn, Crunchbase, Google, industry databases, and custom APIs." },
-  { icon: icons.ai, title: "AI-Powered Scoring", desc: "Machine learning ranks leads by intent signals, engagement patterns, and fit score to prioritize outreach." },
-  { icon: icons.crm, title: "CRM Auto-Sync", desc: "Native integrations with Salesforce, HubSpot, Pipedrive, and more. Leads flow straight to your pipeline." },
+  {
+    icon: icons.extraction,
+    title: "Paid Advertising",
+    desc: "Run high-converting campaigns on Google, Facebook, and Instagram to generate consistent leads.",
+  },
+  {
+    icon: icons.realtime,
+    title: "Real-Time Lead Tracking",
+    desc: "Track every lead in real time and monitor campaign performance with actionable insights.",
+  },
+  {
+    icon: icons.clean,
+    title: "Lead Qualification",
+    desc: "Filter and qualify leads to ensure your sales team only gets high-intent prospects.",
+  },
+  {
+    icon: icons.integrate,
+    title: "Multi-Channel Marketing",
+    desc: "Generate leads from multiple channels including ads, SEO, email, and social media.",
+  },
+  {
+    icon: icons.ai,
+    title: "Conversion Optimization",
+    desc: "Improve landing pages and funnels to maximize conversions and reduce cost per lead.",
+  },
+  {
+    icon: icons.crm,
+    title: "CRM Integration",
+    desc: "Automatically send leads to your CRM like Salesforce, HubSpot, or any custom system.",
+  },
 ];
 
 const agents = [
   {
-    name: "AI Data Mining Agent",
-    emoji: "🤖",
+    name: "Paid Ads Management",
+    emoji: "📢",
     color: "from-[#e6f2ff] to-[#cce5ff]",
     accent: "#0066cc",
-    badge: "Core Engine",
-    role: "Autonomous data discovery",
-    bullets: ["Crawls 10,000+ pages/hour", "Structured + unstructured data", "Adaptive learning from patterns", "Bypass rate-limit with smart rotation"],
+    badge: "Traffic Engine",
+    role: "Drive targeted traffic",
+    bullets: [
+      "Google Ads & Meta Ads campaigns",
+      "Audience targeting & retargeting",
+      "Budget optimization",
+      "High ROI ad strategies",
+    ],
   },
   {
-    name: "AI Lead Capture Agent",
-    emoji: "🎯",
+    name: "Funnel & Landing Pages",
+    emoji: "📄",
     color: "from-[#e6f2ff] to-[#b3d5ff]",
     accent: "#0057ad",
-    badge: "Lead Engine",
-    role: "High-intent prospect identification",
-    bullets: ["Real-time buyer intent signals", "ICP scoring & filtering", "Contact data enrichment", "Automated follow-up triggers"],
+    badge: "Conversion Engine",
+    role: "Convert visitors into leads",
+    bullets: [
+      "High-converting landing pages",
+      "A/B testing & optimization",
+      "Mobile-first design",
+      "Fast-loading pages",
+    ],
   },
   {
-    name: "AI SEO Content Agent",
-    emoji: "📝",
+    name: "Lead Nurturing System",
+    emoji: "📧",
     color: "from-[#eef6ff] to-[#cce5ff]",
     accent: "#1a7ae6",
     badge: "Growth Engine",
-    role: "Content-driven lead generation",
-    bullets: ["Keyword-optimized content creation", "Competitor gap analysis", "Topical authority building", "Automated publishing pipeline"],
+    role: "Turn leads into customers",
+    bullets: [
+      "Email automation",
+      "Follow-up sequences",
+      "CRM workflows",
+      "Lead engagement tracking",
+    ],
   },
 ];
 
 const stats = [
-  { value: 340, suffix: "%", label: "Increase in Lead Volume" },
-  { value: 87, suffix: "%", label: "Reduction in Manual Work" },
-  { value: 12, suffix: "x", label: "Faster Pipeline Filling" },
-  { value: 99, suffix: "%", label: "Data Accuracy Rate" },
+  { value: 300, suffix: "%", label: "Increase in Leads" },
+  { value: 120, suffix: "+", label: "Happy Clients" },
+  { value: 3, suffix: "x", label: "Average ROI" },
+  { value: 95, suffix: "%", label: "Client Satisfaction" },
 ];
 
 /* ─── Page Component ────────────────────────────────────────────────── */
@@ -414,25 +453,25 @@ export default function AIDataMiningPage() {
               </div>
 
               <h1 className="hero-headline text-5xl lg:text-6xl xl:text-7xl font-800 leading-[1.05] tracking-tight mb-6">
-                Turn Raw Data
+                Generate High-Quality
                 <br />
-                <span className="gradient-text">Into Revenue</span>
+                <span className="gradient-text">Leads That Convert</span>
                 <br />
-                with AI
+                Into Sales
               </h1>
 
               <p className="text-lg lg:text-xl text-gray-500 leading-relaxed mb-10 max-w-lg">
-                Automatically discover, extract, and organize high-quality leads using intelligent AI agents — across the entire web, at scale, around the clock.
+                 We help businesses attract, capture, and convert high-intent leads using proven strategies, paid campaigns, and optimized funnels — all designed to grow your revenue.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="shimmer-btn text-white font-600 px-8 py-4 rounded-xl text-base shadow-lg shadow-blue-200 hover:shadow-blue-300 transition-shadow">
-                  Start Mining Free →
+                  Start Generating Leads →
                 </button>
                 <button className="flex items-center gap-3 px-8 py-4 rounded-xl text-base font-600 text-gray-700 hover:bg-gray-50 transition-colors"
                   style={{ border: "1.5px solid #e2e8f0" }}>
                   <span className="w-10 h-10 rounded-full bg-[#e6f2ff] flex items-center justify-center text-[#0066cc]">▶</span>
-                  Watch Demo
+                 Watch Demo
                 </button>
               </div>
 
@@ -450,7 +489,7 @@ export default function AIDataMiningPage() {
                   <div className="flex gap-0.5 mb-1">
                     {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-sm">★</span>)}
                   </div>
-                  <p className="text-sm text-gray-500"><strong className="text-gray-800">2,400+</strong> teams mining leads with AI</p>
+                  <p className="text-sm text-gray-500"><strong className="text-gray-800">2,400+</strong>businesses growing with our lead generation system</p>
                 </div>
               </div>
             </div>
@@ -592,7 +631,7 @@ export default function AIDataMiningPage() {
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-600 mb-4"
             style={{ background: "#e6f2ff", color: "#0066cc" }}>Intelligent Agents</span>
           <h2 className="hero-headline text-4xl lg:text-5xl font-800 text-gray-900 mb-4">
-            Three AI Agents. One Unstoppable Pipeline.
+            Our Lead Generation Services
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
             Each agent handles a specialized role, coordinating autonomously to deliver leads from source to CRM without human intervention.
@@ -678,10 +717,22 @@ export default function AIDataMiningPage() {
           {/* Outcome cards */}
           <div className="grid lg:grid-cols-3 gap-6">
             {[
-              { emoji: "🚀", title: "10x Pipeline Velocity", desc: "Fill your CRM with qualified leads weeks faster than manual research. Your sales team closes while AI prospecting never stops." },
-              { emoji: "🎯", title: "Zero Wasted Outreach", desc: "AI-scored leads mean your reps only contact decision-makers who match your ICP — dramatically improving reply rates." },
-              { emoji: "📈", title: "Compounding Data Moat", desc: "Every scan enriches your proprietary dataset. The longer you run it, the smarter and more accurate the AI becomes." },
-            ].map((card, i) => (
+  {
+    emoji: "🚀",
+    title: "Faster Business Growth",
+    desc: "Generate consistent leads and grow your business faster with proven strategies.",
+  },
+  {
+    emoji: "🎯",
+    title: "High-Quality Leads",
+    desc: "Get leads that are genuinely interested in your services, not just random traffic.",
+  },
+  {
+    emoji: "📈",
+    title: "Better ROI",
+    desc: "Optimize campaigns to reduce cost per lead and maximize your return on investment.",
+  },
+].map((card, i) => (
               <div key={i} className="card-hover bg-white rounded-2xl p-8 group"
                 style={{ border: "1.5px solid #e6f2ff", boxShadow: "0 4px 24px rgba(0,102,204,0.06)" }}>
                 <div className="text-4xl mb-5">{card.emoji}</div>
@@ -720,31 +771,31 @@ export default function AIDataMiningPage() {
               </div>
 
               <h2 className="hero-headline text-4xl lg:text-5xl font-800 text-white mb-5 leading-tight">
-                Ready to Put Your
-                <br />Lead Generation on Autopilot?
+                Ready to Grow Your Business
+  <br />with High-Quality Leads?
               </h2>
 
               <p className="text-blue-200 text-lg mb-10 max-w-xl mx-auto">
-                Join 2,400+ businesses already using AI agents to extract, clean, and deliver high-quality leads — automatically, 24/7.
+                  Start generating consistent, high-converting leads today with our proven lead generation strategies.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white font-700 px-10 py-4 rounded-xl text-base transition-all hover:scale-105 hover:shadow-xl"
                   style={{ color: "#0066cc" }}>
-                  Start Free Trial →
+                  Get Free Consultation →
                 </button>
                 <button className="font-600 px-10 py-4 rounded-xl text-base transition-all hover:bg-white hover:bg-opacity-10"
                   style={{ color: "white", border: "1.5px solid rgba(255,255,255,0.35)" }}>
-                  Book a Demo
+                 Book a Demo
                 </button>
               </div>
 
               {/* Trust signals */}
               <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center mt-10 text-blue-200 text-sm">
-                <span>✓ No credit card required</span>
-                <span>✓ 14-day free trial</span>
-                <span>✓ Cancel anytime</span>
-                <span>✓ SOC 2 compliant</span>
+                <span>✓ No long-term contracts </span>
+                <span>✓ Results-driven strategy  </span>
+                <span>✓  Transparent reporting</span>
+                <span>✓ Dedicated support  </span>
               </div>
             </div>
           </div>

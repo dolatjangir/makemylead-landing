@@ -42,11 +42,11 @@ const HeroSection: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary-100)] border border-[var(--color-primary-200)] mb-8 animate-fade-in">
             <Brain className="w-4 h-4 text-[var(--color-primary-600)]" />
-            <span className="text-sm font-semibold text-[var(--color-primary-700)]">AI-Powered Property Matching</span>
+            <span className="text-sm font-semibold text-[var(--color-primary-700)]">AI-Powered Lead Generation</span>
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[var(--color-primary-900)] tracking-tight mb-6 leading-tight">
-            Make Smarter Property Decisions with{' '}
+           Generate & Convert More Leads with{' '}
             <span className="relative inline-block">
               <span className="relative z-10 text-[var(--color-primary-600)]">AI</span>
               <svg className="absolute -bottom-2 left-0 w-full h-4 text-[var(--color-primary-200)] -z-0" viewBox="0 0 100 8" preserveAspectRatio="none">
@@ -56,17 +56,17 @@ const HeroSection: React.FC = () => {
           </h1>
           
           <p className="text-xl lg:text-2xl text-[var(--color-primary-800)]/70 leading-relaxed max-w-2xl mx-auto mb-10">
-            Leverage AI-powered insights to match buyers with the perfect properties faster and more accurately.
+           Capture, qualify, and convert high-quality leads automatically using AI across all your marketing channels.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="group w-full sm:w-auto px-8 py-4 bg-[var(--color-primary-600)] text-white rounded-xl font-semibold shadow-xl shadow-[var(--color-primary-600)]/25 hover:shadow-[var(--color-primary-600)]/40 hover:bg-[var(--color-primary-700)] transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-              Get Started
+           Start Generating Leads
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="group w-full sm:w-auto px-8 py-4 bg-white text-[var(--color-primary-700)] border-2 border-[var(--color-primary-200)] rounded-xl font-semibold hover:border-[var(--color-primary-400)] hover:bg-[var(--color-primary-50)] transition-all duration-300 flex items-center justify-center gap-2 text-lg">
               <Play className="w-5 h-5 fill-current" />
-              View Demo
+             See How It Works
             </button>
           </div>
 
@@ -93,54 +93,54 @@ const HeroSection: React.FC = () => {
 
 // 2. Core Capabilities (Features Grid)
 const FeaturesSection: React.FC = () => {
-  const features = [
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "AI Property Matching",
-      description: "Neural networks analyze thousands of data points to find perfect property fits instantly.",
-      color: "from-[var(--color-primary-500)] to-[var(--color-primary-600)]"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Buyer Preference Analysis",
-      description: "Deep learning algorithms understand buyer behavior, priorities, and hidden preferences.",
-      color: "from-[var(--color-secondary-500)] to-[var(--color-secondary-600)]"
-    },
-    {
-      icon: <Star className="w-6 h-6" />,
-      title: "Smart Recommendations",
-      description: "Personalized property suggestions that improve with every interaction and feedback.",
-      color: "from-[var(--color-primary-400)] to-[var(--color-primary-500)]"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Market Insights",
-      description: "Real-time market analysis, pricing trends, and investment potential scores for every listing.",
-      color: "from-[var(--color-secondary-400)] to-[var(--color-secondary-500)]"
-    },
-    {
-      icon: <Filter className="w-6 h-6" />,
-      title: "Advanced Filtering",
-      description: "Intelligent filters that learn from searches and suggest relevant criteria automatically.",
-      color: "from-[var(--color-primary-600)] to-[var(--color-primary-700)]"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-Time Updates",
-      description: "Instant notifications when matching properties hit the market or prices change.",
-      color: "from-[var(--color-secondary-600)] to-[var(--color-secondary-700)]"
-    }
-  ];
+ const features = [
+  {
+    icon: <Target className="w-6 h-6" />,
+    title: "AI Lead Scoring",
+    description: "Automatically prioritize leads based on intent, behavior, and conversion probability.",
+    color: "from-[var(--color-primary-500)] to-[var(--color-primary-600)]"
+  },
+  {
+    icon: <Users className="w-6 h-6" />,
+    title: "Multi-Channel Lead Capture",
+    description: "Collect leads from website, ads, social media, and landing pages into one dashboard.",
+    color: "from-[var(--color-secondary-500)] to-[var(--color-secondary-600)]"
+  },
+  {
+    icon: <Star className="w-6 h-6" />,
+    title: "Smart Lead Qualification",
+    description: "AI filters out low-quality leads and highlights high-converting prospects instantly.",
+    color: "from-[var(--color-primary-400)] to-[var(--color-primary-500)]"
+  },
+  {
+    icon: <TrendingUp className="w-6 h-6" />,
+    title: "Conversion Analytics",
+    description: "Track which campaigns and channels bring the most valuable leads.",
+    color: "from-[var(--color-secondary-400)] to-[var(--color-secondary-500)]"
+  },
+  {
+    icon: <Filter className="w-6 h-6" />,
+    title: "Advanced Lead Segmentation",
+    description: "Segment leads by behavior, interest, and readiness for better targeting.",
+    color: "from-[var(--color-primary-600)] to-[var(--color-primary-700)]"
+  },
+  {
+    icon: <Zap className="w-6 h-6" />,
+    title: "Automated Follow-Ups",
+    description: "Send emails, SMS, and reminders automatically to nurture leads and increase conversions.",
+    color: "from-[var(--color-secondary-600)] to-[var(--color-secondary-700)]"
+  }
+];
 
   return (
     <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-primary-900)] mb-4">
-            Core Capabilities
+            Lead Generation Capabilities
           </h2>
           <p className="text-lg text-[var(--color-primary-700)]/70">
-            Everything you need to match buyers with their dream properties using advanced AI
+          Everything you need to capture, manage, and convert leads using AI automation
           </p>
         </div>
 
@@ -177,11 +177,11 @@ const ShowcaseSection: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary-100)] border border-[var(--color-primary-200)] mb-6">
               <Search className="w-4 h-4 text-[var(--color-primary-600)]" />
-              <span className="text-sm font-semibold text-[var(--color-primary-700)]">See AI in Action</span>
+              <span className="text-sm font-semibold text-[var(--color-primary-700)]">See Lead Generation in Action</span>
             </div>
             
             <h2 className="text-4xl sm:text-5xl font-bold text-[var(--color-primary-900)] mb-6 leading-tight">
-              Watch how EstateAI analyzes user behavior and instantly recommends the most relevant properties
+             Watch how AI captures, qualifies, and converts leads automatically in real-time
             </h2>
             
             <p className="text-lg text-[var(--color-primary-700)]/70 mb-8 leading-relaxed">
@@ -190,11 +190,11 @@ const ShowcaseSection: React.FC = () => {
 
             <ul className="space-y-4 mb-8">
               {[
-                "Real-time behavioral analysis",
-                "Dynamic preference learning",
-                "Instant property ranking",
-                "Multi-factor matching algorithm"
-              ].map((item, index) => (
+  "Real-time lead tracking",
+  "AI lead scoring & qualification",
+  "Instant response automation",
+  "Multi-channel lead capture"
+].map((item, index) => (
                 <li key={index} className="flex items-center gap-3 text-[var(--color-primary-800)]">
                   <div className="w-6 h-6 rounded-full bg-[var(--color-primary-100)] flex items-center justify-center">
                     <CheckCircle2 className="w-4 h-4 text-[var(--color-primary-600)]" />
@@ -293,43 +293,43 @@ const ShowcaseSection: React.FC = () => {
 
 // 4. Benefits Section
 const BenefitsSection: React.FC = () => {
-  const benefits = [
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Faster Decisions",
-      description: "Reduce time spent searching and analyzing properties. AI delivers instant, ranked recommendations based on buyer preferences.",
-      stat: "75%",
-      statLabel: "faster search"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Higher Conversions",
-      description: "Match buyers with the right property instantly. AI-driven matching increases showing-to-offer ratios significantly.",
-      stat: "3x",
-      statLabel: "more conversions"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Personalized Experience",
-      description: "Deliver tailored recommendations to every client. Each buyer receives a unique, curated property feed that evolves with their preferences.",
-      stat: "100%",
-      statLabel: "personalized"
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Data-Driven Insights",
-      description: "Make smarter decisions backed by AI. Access market trends, pricing analysis, and buyer behavior predictions in real-time.",
-      stat: "94%",
-      statLabel: "accuracy"
-    }
-  ];
+ const benefits = [
+  {
+    icon: <Clock className="w-8 h-8" />,
+    title: "Faster Lead Response",
+    description: "Respond to leads instantly with AI automation and never miss an opportunity.",
+    stat: "<1 min",
+    statLabel: "response time"
+  },
+  {
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "Higher Conversions",
+    description: "Convert more leads into customers with AI-driven targeting and follow-ups.",
+    stat: "3x",
+    statLabel: "more conversions"
+  },
+  {
+    icon: <Target className="w-8 h-8" />,
+    title: "Better Lead Quality",
+    description: "Focus only on high-intent leads with automated scoring and filtering.",
+    stat: "90%+",
+    statLabel: "qualified leads"
+  },
+  {
+    icon: <Brain className="w-8 h-8" />,
+    title: "Smart Insights",
+    description: "Get real-time data on campaigns, leads, and performance to optimize ROI.",
+    stat: "100%",
+    statLabel: "data-driven"
+  }
+];
 
   return (
     <section id="benefits" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-primary-900)] mb-4">
-            Why EstateAI Matters
+            Why Lead Generation Matters
           </h2>
           <p className="text-lg text-[var(--color-primary-700)]/70">
             Transform your real estate business with intelligent automation
@@ -369,32 +369,32 @@ const BenefitsSection: React.FC = () => {
 
 // 5. Workflow / How it Works
 const WorkflowSection: React.FC = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Capture Preferences",
-      description: "Buyers share their requirements through intuitive forms, chat, or voice. AI extracts key criteria and hidden preferences.",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      number: "02",
-      title: "Analyze Behavior",
-      description: "Machine learning algorithms process search patterns, dwell time, and interactions to understand true buyer intent.",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      number: "03",
-      title: "Match Properties",
-      description: "Neural networks compare buyer profiles against inventory using 50+ matching factors including lifestyle and investment potential.",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      number: "04",
-      title: "Deliver Recommendations",
-      description: "AI generates ranked property lists with match scores, personalized insights, and automated viewing scheduling.",
-      icon: <Zap className="w-6 h-6" />
-    }
-  ];
+const steps = [
+  {
+    number: "01",
+    title: "Capture Leads",
+    description: "Collect leads automatically from your website, ads, and social platforms.",
+    icon: <Users className="w-6 h-6" />
+  },
+  {
+    number: "02",
+    title: "Qualify Leads",
+    description: "AI analyzes behavior and filters high-quality leads from low-intent users.",
+    icon: <Brain className="w-6 h-6" />
+  },
+  {
+    number: "03",
+    title: "Nurture Leads",
+    description: "Send automated follow-ups, emails, and messages to engage leads.",
+    icon: <Target className="w-6 h-6" />
+  },
+  {
+    number: "04",
+    title: "Convert Leads",
+    description: "Turn qualified leads into customers with smart insights and timing.",
+    icon: <Zap className="w-6 h-6" />
+  }
+];
 
   return (
     <section id="workflow" className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-primary-900)] text-white relative overflow-hidden">
@@ -409,7 +409,7 @@ const WorkflowSection: React.FC = () => {
             How It Works
           </h2>
           <p className="text-lg text-[var(--color-primary-200)]">
-            Four simple steps to AI-powered property matching
+           Four simple steps to AI-powered lead conversion
           </p>
         </div>
 
@@ -458,19 +458,19 @@ const CTASection: React.FC = () => {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Let AI Find the Perfect Property for Every Client
+          Turn Visitors into High-Quality Leads Automatically
         </h2>
         <p className="text-xl text-[var(--color-primary-100)] mb-10 max-w-2xl mx-auto">
-          Join thousands of real estate professionals using EstateAI to close more deals with less effort.
+         Join businesses using AI to capture, nurture, and convert leads on makemylead.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button className="group w-full sm:w-auto px-10 py-5 bg-white text-[var(--color-primary-700)] rounded-xl font-bold text-lg shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-            Get Started
+            Start Free Trial
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button className="w-full sm:w-auto px-10 py-5 bg-transparent text-white border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300">
-            Talk to Sales
+            Book a Demo
           </button>
         </div>
 

@@ -161,7 +161,7 @@ if(res.ok){
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-5">
               <img
-                src="/assets/estateai.png"
+                src="/assets/makemylead-logo.png"
                 width={200}
                 height={60}
                 alt="Estate-Ai"
@@ -170,8 +170,8 @@ if(res.ok){
             </Link>
 
             <p className="text-sm text-slate-500 leading-relaxed max-w-xs mb-6">
-              The modern platform for hotel owners, Airbnb hosts, and property managers.
-              Automate operations, increase bookings, and grow revenue — on autopilot.
+          The ultimate lead generation platform for hotel owners, Airbnb hosts, and property managers.
+Get more direct inquiries, automate follow-ups, and convert leads into bookings — 24/7 on makemylead.
             </p>
 
             {/* Social icons */}

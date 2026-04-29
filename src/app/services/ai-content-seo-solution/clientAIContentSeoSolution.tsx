@@ -43,38 +43,34 @@ function FadeIn({ children, delay = 0, className = "" }: {
 const workflowSteps = [
   {
     step: "01",
-    title: "Keyword Research",
-    desc: "AI finds high-volume, low-competition keywords your audience is actively searching for — in seconds.",
-    icon: "🔍",
-    color: "#0066cc", bg: "#e6f2ff", border: "#99ccff",
+    title: "Capture Leads",
+    desc: "High-converting landing pages, forms, and chatbots capture visitor data instantly.",
+    icon: "📥",
   },
   {
     step: "02",
-    title: "Content Generation",
-    desc: "Full blog posts, landing pages, and product descriptions written with natural language — SEO-optimised from draft one.",
-    icon: "✍️",
-    color: "#0057ad", bg: "#cce5ff", border: "#66b2ff",
+    title: "Qualify Automatically",
+    desc: "AI filters serious prospects by asking smart questions and scoring each lead.",
+    icon: "🎯",
   },
   {
     step: "03",
-    title: "On-Page SEO",
-    desc: "Meta titles, descriptions, heading structure, internal links, and schema markup applied automatically before publish.",
-    icon: "⚙️",
-    color: "#00478f", bg: "#b3d5ff", border: "#3399ff",
+    title: "Instant Follow-Up",
+    desc: "Automated WhatsApp, email, and call responses engage leads within seconds.",
+    icon: "⚡",
   },
   {
     step: "04",
-    title: "Auto Publishing",
-    desc: "Content is scheduled and published to your CMS, then instantly distributed across social channels.",
-    icon: "🚀",
-    color: "#003871", bg: "#8dc0ff", border: "#1a7ae6",
+    title: "Convert to Customers",
+    desc: "Sales-ready leads are delivered directly to your CRM or sales team.",
+    icon: "💰",
   },
 ];
 
 const features = [
   {
-    title: "AI Blog Generation",
-    desc: "Long-form, well-structured articles written in your brand's voice — complete with H1s, FAQs, and CTAs.",
+   title: "Smart Lead Capture",
+    desc: "Capture leads through forms, popups, landing pages, and AI chatbots.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" strokeLinecap="round" strokeLinejoin="round"/>
@@ -83,8 +79,8 @@ const features = [
     color: "#0066cc", bg: "#e6f2ff",
   },
   {
-    title: "SEO Keyword Optimisation",
-    desc: "Every piece of content is built around keywords that drive traffic — with semantic coverage for topical authority.",
+       title: "AI Lead Qualification",
+    desc: "Automatically identify high-intent prospects using intelligent scoring.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" strokeLinecap="round"/>
@@ -93,8 +89,8 @@ const features = [
     color: "#0057ad", bg: "#cce5ff",
   },
   {
-    title: "Auto Publishing",
-    desc: "Push content directly to WordPress, Webflow, or any CMS — formatted, tagged, and ready to rank.",
+     title: "Automated Follow-Ups",
+    desc: "Send instant responses via WhatsApp, email, and SMS.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" strokeLinecap="round" strokeLinejoin="round"/>
@@ -103,8 +99,8 @@ const features = [
     color: "#00478f", bg: "#b3d5ff",
   },
   {
-    title: "Social Distribution",
-    desc: "Each blog post is repurposed into LinkedIn articles, Instagram captions, and tweet threads — automatically.",
+     title: "CRM Integration",
+    desc: "Sync leads directly to your CRM or sales pipeline in real-time.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
@@ -117,8 +113,8 @@ const features = [
 
 const agents = [
   {
-    name: "AI Content Creation Agent",
-    role: "Produces long-form blogs, landing pages, email sequences, and ad copy — trained on your brand tone and niche.",
+       name: "AI Lead Capture Agent",
+    role: "Engages visitors through chat, forms, and landing pages to capture leads instantly.",
     tag: "Content",
     emoji: "✍️",
     color: "#0066cc",
@@ -127,8 +123,8 @@ const agents = [
     chips: ["Blog writing", "Landing pages", "Email copy", "Ad headlines"],
   },
   {
-    name: "AI SEO Content Agent",
-    role: "Researches keywords, builds content briefs, audits existing pages, and tracks ranking improvements over time.",
+      name: "AI Qualification Agent",
+    role: "Filters and scores leads based on intent, budget, and readiness.",
     tag: "SEO",
     emoji: "📈",
     color: "#0057ad",
@@ -137,8 +133,8 @@ const agents = [
     chips: ["Keyword research", "On-page SEO", "Meta optimisation", "Rank tracking"],
   },
   {
-    name: "AI Social Media Agent",
-    role: "Repurposes every piece of content into platform-native posts, schedules them at peak engagement windows.",
+    name: "AI Follow-Up Agent",
+    role: "Automatically sends messages, reminders, and responses to convert leads faster.",
     tag: "Social",
     emoji: "📢",
     color: "#003871",

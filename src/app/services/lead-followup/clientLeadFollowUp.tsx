@@ -42,9 +42,9 @@ function FadeIn({ children, delay = 0, className = "" }: {
 const howItWorks = [
   {
     num: "01",
-    title: "Lead Enters System",
-    desc: "Every new lead — from any source — is instantly captured and added to your follow-up pipeline.",
-    icon: (
+    title: "Capture Leads Instantly",
+    desc: "Collect leads from landing pages, ads, forms, and social media — all in one place.",
+     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
       </svg>
@@ -52,9 +52,9 @@ const howItWorks = [
   },
   {
     num: "02",
-    title: "AI Schedules Follow-Ups",
-    desc: "Smart timing engine picks the optimal moment to reach each lead — day, time, and channel.",
-    icon: (
+    title: "Qualify with AI",
+    desc: "AI filters high-intent leads by asking smart questions and tracking behavior.",
+      icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round" />
       </svg>
@@ -62,9 +62,9 @@ const howItWorks = [
   },
   {
     num: "03",
-    title: "Sends Messages & Calls",
-    desc: "AI fires personalised WhatsApp messages, emails, and voice calls across every channel simultaneously.",
-    icon: (
+    title: "Automated Follow-Ups",
+    desc: "Send personalised WhatsApp, email, and call sequences automatically.",
+  icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
@@ -72,9 +72,9 @@ const howItWorks = [
   },
   {
     num: "04",
-    title: "Tracks Engagement",
-    desc: "Every open, reply, and call outcome is logged — so your pipeline always reflects real intent.",
-    icon: (
+    title: "Convert Into Customers",
+    desc: "Book appointments, close deals, and move leads through your sales funnel.",
+     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -84,9 +84,9 @@ const howItWorks = [
 
 const features = [
   {
-    title: "Auto WhatsApp & Email",
-    desc: "Send personalised follow-ups on WhatsApp and email — triggered automatically, at the right time.",
-    icon: (
+    title: "High-Converting Landing Pages",
+    desc: "Create optimized pages that capture maximum leads without coding.",
+      icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
@@ -95,9 +95,9 @@ const features = [
     bg: "#e6f2ff",
   },
   {
-    title: "AI Voice Calling",
-    desc: "Human-sounding AI calls your leads, qualifies them, and books appointments — all without your team.",
-    icon: (
+    title: "Smart Lead Qualification",
+    desc: "Automatically filter serious buyers using AI-based conversations.",
+     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z" />
       </svg>
@@ -106,8 +106,8 @@ const features = [
     bg: "#cce5ff",
   },
   {
-    title: "Smart Timing Optimisation",
-    desc: "Machine learning picks the highest-engagement window for every lead based on past behaviour.",
+    title: "Multi-Channel Outreach",
+    desc: "Reach leads via WhatsApp, email, and calls from a single platform.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" strokeLinecap="round" />
@@ -117,8 +117,8 @@ const features = [
     bg: "#b3d5ff",
   },
   {
-    title: "Lead Engagement Tracking",
-    desc: "See every interaction in real time — opens, replies, call outcomes, and conversion signals.",
+    title: "CRM & Pipeline Tracking",
+    desc: "Track every lead from first click to final conversion in real time.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M3 3v18h18" strokeLinecap="round" />
@@ -129,58 +129,56 @@ const features = [
     bg: "#8dc0ff",
   },
 ];
-
 const agents = [
   {
-    name: "AI Follow-Up Agent",
-    role: "Orchestrates the entire follow-up sequence — timing, channel selection, and message personalisation.",
-    tag: "Follow-Up",
-    emoji: "🤖",
+    name: "Lead Capture Agent",
+    role: "Captures leads from ads, landing pages, and forms instantly into your system.",
+    tag: "Capture",
+    emoji: "📥",
     color: "#0066cc",
     bg: "#e6f2ff",
     border: "#99ccff",
   },
   {
-    name: "AI Calling Agent",
-    role: "Dials leads with a natural AI voice, qualifies their intent, and logs every call outcome automatically.",
-    tag: "Calling",
-    emoji: "📞",
+    name: "AI Qualification Agent",
+    role: "Qualifies leads automatically using smart conversations and behavior tracking.",
+    tag: "Qualification",
+    emoji: "🧠",
     color: "#0057ad",
     bg: "#cce5ff",
     border: "#66b2ff",
   },
   {
-    name: "AI Social Media Agent",
-    role: "Engages leads on WhatsApp, Instagram DMs, and LinkedIn — keeping your brand top of mind.",
-    tag: "Social",
-    emoji: "💬",
+    name: "Conversion Agent",
+    role: "Nurtures leads, schedules calls, and pushes them toward conversion.",
+    tag: "Conversion",
+    emoji: "🚀",
     color: "#003871",
     bg: "#b3d5ff",
     border: "#3399ff",
   },
 ];
-
 const timeline = [
-  { time: "Day 0", label: "Lead captured", channel: "System", icon: "📥", done: true },
-  { time: "Day 1", label: "Welcome WhatsApp message", channel: "WhatsApp", icon: "💬", done: true },
-  { time: "Day 2", label: "Introductory email sent", channel: "Email", icon: "📧", done: true },
-  { time: "Day 3", label: "AI voice call attempted", channel: "Call", icon: "📞", done: false },
-  { time: "Day 5", label: "Social DM follow-up", channel: "Social", icon: "📲", done: false },
-  { time: "Day 7", label: "Final re-engagement message", channel: "WhatsApp", icon: "🔔", done: false },
+  { time: "Day 0", label: "Lead captured from landing page", channel: "Form", icon: "📥", done: true },
+  { time: "Day 1", label: "Welcome WhatsApp sent", channel: "WhatsApp", icon: "💬", done: true },
+  { time: "Day 2", label: "Lead qualification questions", channel: "AI Chat", icon: "🤖", done: true },
+  { time: "Day 3", label: "Sales call scheduled", channel: "Call", icon: "📞", done: false },
+  { time: "Day 5", label: "Reminder + offer message", channel: "Email", icon: "📧", done: false },
+  { time: "Day 7", label: "Final conversion push", channel: "WhatsApp", icon: "🔥", done: false },
 ];
 
 const stats = [
-  { value: "4.2×", label: "More replies vs manual follow-up" },
-  { value: "68%", label: "Open rate on AI messages" },
-  { value: "3 min", label: "Average first response time" },
-  { value: "91%", label: "Follow-up completion rate" },
+  { value: "5×", label: "More leads captured automatically" },
+  { value: "72%", label: "Increase in conversion rate" },
+  { value: "2 min", label: "Average lead response time" },
+  { value: "3.5×", label: "Higher ROI on campaigns" },
 ];
 
 const channels = [
-  { name: "WhatsApp", color: "#0066cc", bg: "#e6f2ff", pct: 38 },
-  { name: "Email", color: "#0057ad", bg: "#cce5ff", pct: 29 },
-  { name: "Voice Call", color: "#00478f", bg: "#b3d5ff", pct: 21 },
-  { name: "Social DM", color: "#003871", bg: "#8dc0ff", pct: 12 },
+  { name: "Landing Pages", color: "#0066cc", bg: "#e6f2ff", pct: 35 },
+  { name: "WhatsApp", color: "#0057ad", bg: "#cce5ff", pct: 25 },
+  { name: "Email Funnels", color: "#00478f", bg: "#b3d5ff", pct: 20 },
+  { name: "Calls", color: "#003871", bg: "#8dc0ff", pct: 20 },
 ];
 
 /* ─────────────────────────────────────────────
@@ -273,7 +271,7 @@ export default function AIFollowUpPage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium mb-7"
                 style={{ background: "#fff", borderColor: "#99ccff", color: "#0066cc" }}>
                 <span className="w-2 h-2 rounded-full ping-dot" style={{ background: "#0066cc" }} />
-                Multi-Channel Follow-Up Automation
+                AI-Powered Lead Generation System
               </div>
 
               <h1
@@ -284,30 +282,30 @@ export default function AIFollowUpPage() {
                   color: "#002b57",
                 }}
               >
-                Never Miss a
+               Turn Visitors Into Qualified Leads
                 <br />
-                <span style={{ color: "#0066cc" }}>Lead Again</span>
+                <span style={{ color: "#0066cc" }}>  — On Autopilot</span>
               </h1>
 
               <p className="text-lg leading-relaxed mb-10 max-w-lg" style={{ color: "#1d5aa6" }}>
-                AI automatically follows up with your leads via calls, WhatsApp messages, emails,
-                and social DMs — so no opportunity ever goes cold.
+               Capture, qualify, and convert leads automatically 
+               using AI-driven funnels, smart follow-ups, and multi-channel outreach — all in one platform.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <button className="btn-primary px-8 py-4 rounded-xl text-white font-semibold text-base"
                   style={{ background: "#0066cc" }}>
-                  Activate Follow-Up AI
+                Start Generating Leads
                 </button>
                 <button className="btn-outline px-8 py-4 rounded-xl font-semibold text-base border-2"
                   style={{ borderColor: "#99ccff", color: "#0066cc", background: "white" }}>
-                  Watch Demo →
+                 See How It Works →
                 </button>
               </div>
 
               {/* mini channel pills */}
               <div className="mt-9 flex flex-wrap gap-2">
-                {["WhatsApp", "Email", "Voice Call", "Instagram DM", "LinkedIn"].map((ch) => (
+                {["Landing Pages", "Forms", "WhatsApp", "Email Funnels", "CRM Sync"].map((ch) => (
                   <span key={ch}
                     className="text-xs font-medium px-3 py-1.5 rounded-full border"
                     style={{ borderColor: "#cce5ff", color: "#0057ad", background: "#fff" }}>
@@ -720,23 +718,23 @@ export default function AIFollowUpPage() {
 
               <h2 className="text-3xl font-extrabold text-white mb-5 leading-tight"
                 style={{ fontFamily: "'Sora',sans-serif" }}>
-                Every unanswered lead
-                <br />is revenue walking away.
+             Stop Losing Potential
+                <br />Customers Every Day
               </h2>
 
               <p className="text-base mb-10" style={{ color: "#b3d5ff" }}>
-                Deploy your AI Follow-Up team in minutes. No coding. No hiring.
-                Just consistent, personalised outreach — on autopilot.
+              Start capturing, nurturing, and converting leads automatically.
+No technical skills needed — just plug in and grow your business faster.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
                 <button className="btn-primary px-9 py-4 rounded-xl font-semibold text-base"
                   style={{ background: "white", color: "#0066cc" }}>
-                  Start Following Up Now
+                 Start Generating Leads Now
                 </button>
                 <button className="px-9 py-4 rounded-xl font-semibold text-base border-2 transition-colors"
                   style={{ borderColor: "rgba(255,255,255,0.35)", color: "white", background: "rgba(255,255,255,0.08)" }}>
-                  Book a Live Demo
+                Get Free Demo
                 </button>
               </div>
 

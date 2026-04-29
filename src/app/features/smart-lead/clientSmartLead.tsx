@@ -43,13 +43,13 @@ const HeroSection: React.FC = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary-100)] border border-[var(--color-primary-200)] mb-8">
             <Users className="w-4 h-4 text-[var(--color-primary-600)]" />
-            <span className="text-sm font-semibold text-[var(--color-primary-700)]">Never lose a lead</span>
+            <span className="text-sm font-semibold text-[var(--color-primary-700)]">Get More Qualified Leads Daily</span>
           </div>
           
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[var(--color-primary-900)] tracking-tight mb-6 leading-tight">
-            Convert More Leads with{' '}
+            Generate High-Quality Leads{' '}
             <span className="relative inline-block">
-              <span className="relative z-10 text-[var(--color-primary-600)]">AI-Powered</span>
+              <span className="relative z-10 text-[var(--color-primary-600)]">on makemylead</span>
               <svg className="absolute -bottom-2 left-0 w-full h-4 text-[var(--color-primary-200)] -z-0" viewBox="0 0 200 8" preserveAspectRatio="none">
                 <path d="M0,4 Q100,0 200,4" stroke="currentColor" strokeWidth="8" fill="none" />
               </svg>
@@ -58,13 +58,13 @@ const HeroSection: React.FC = () => {
           </h1>
           
           <p className="text-xl lg:text-2xl text-[var(--color-primary-800)]/70 leading-relaxed max-w-2xl mx-auto mb-10">
-            Capture, qualify, and convert leads automatically across all channels. 
-            EstateAI's intelligent agents work 24/7 to fill your pipeline with ready-to-buy prospects.
+           Capture, qualify, and convert high-quality leads 
+           automatically from ads, websites, and social media using AI automation.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="group w-full sm:w-auto px-8 py-4 bg-[var(--color-primary-600)] text-white rounded-xl font-semibold shadow-xl shadow-[var(--color-primary-600)]/25 hover:shadow-[var(--color-primary-600)]/40 hover:bg-[var(--color-primary-700)] transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-              Start Converting Leads
+             Get More Leads
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="group w-full sm:w-auto px-8 py-4 bg-white text-[var(--color-primary-700)] border-2 border-[var(--color-primary-200)] rounded-xl font-semibold hover:border-[var(--color-primary-400)] hover:bg-[var(--color-primary-50)] transition-all duration-300 flex items-center justify-center gap-2 text-lg">
@@ -95,44 +95,44 @@ const HeroSection: React.FC = () => {
 
 // 2. Core Features Section
 const FeaturesSection: React.FC = () => {
-  const features = [
-    {
-      icon: <Filter className="w-6 h-6" />,
-      title: "AI Lead Scoring",
-      description: "Automatically rank leads by purchase intent, budget, and timeline using predictive machine learning models.",
-      metric: "94% accuracy"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Multi-Channel Capture",
-      description: "Aggregate leads from Zillow, Realtor.com, Facebook, Google Ads, and your website into one unified system.",
-      metric: "All sources"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Instant Response",
-      description: "AI agents respond to inquiries within seconds, 24/7, with personalized messages that convert browsers into buyers.",
-      metric: "< 1 min avg"
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Smart Segmentation",
-      description: "Auto-categorize leads by behavior, preferences, and readiness to buy for targeted, relevant nurturing campaigns.",
-      metric: "Auto-tagged"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Pipeline Intelligence",
-      description: "Visual deal pipelines with AI-powered next-step recommendations, risk alerts, and conversion probability scores.",
-      metric: "Predictive"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Follow-Ups",
-      description: "Never drop the ball. Smart sequences adapt based on lead engagement, sending emails, texts, and calls at optimal times.",
-      metric: "Zero leakage"
-    }
-  ];
+ const features = [
+  {
+    icon: <Filter className="w-6 h-6" />,
+    title: "Smart Lead Qualification",
+    description: "Automatically filter and qualify leads based on user behavior, interest, and buying intent.",
+    metric: "AI Powered"
+  },
+  {
+    icon: <Target className="w-6 h-6" />,
+    title: "Multi-Channel Lead Capture",
+    description: "Capture leads from Facebook Ads, Google Ads, landing pages, and your website in one place.",
+    metric: "All Channels"
+  },
+  {
+    icon: <Clock className="w-6 h-6" />,
+    title: "Instant Lead Response",
+    description: "Respond to every lead instantly with automated WhatsApp, email, or SMS replies.",
+    metric: "< 30 sec"
+  },
+  {
+    icon: <MessageSquare className="w-6 h-6" />,
+    title: "Automated Follow-Ups",
+    description: "Set automated sequences to nurture leads and increase conversion rate.",
+    metric: "Auto Follow"
+  },
+  {
+    icon: <BarChart3 className="w-6 h-6" />,
+    title: "Performance Tracking",
+    description: "Track leads, campaigns, and conversion performance in real-time dashboard.",
+    metric: "Live Data"
+  },
+  {
+    icon: <Zap className="w-6 h-6" />,
+    title: "Conversion Optimization",
+    description: "Get AI suggestions to improve conversion and close more deals faster.",
+    metric: "High ROI"
+  }
+];
 
   return (
     <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
@@ -184,13 +184,12 @@ const ShowcaseSection: React.FC = () => {
     { id: 'analytics', label: 'Analytics', icon: <TrendingUp className="w-4 h-4" /> }
   ];
 
-  const leads = [
-    { id: '1', name: 'Jennifer Walsh', email: 'jwalsh@email.com', source: 'Zillow', score: 96, status: 'hot', time: '2m ago', avatar: 'JW', action: 'AI Recommended: Schedule viewing' },
-    { id: '2', name: 'Robert Chen', email: 'robert.c@email.com', source: 'Website', score: 88, status: 'hot', time: '15m ago', avatar: 'RC', action: 'Auto-replied: Sent listings' },
-    { id: '3', name: 'Amanda Foster', email: 'afoster@email.com', source: 'Referral', score: 72, status: 'warm', time: '1h ago', avatar: 'AF', action: 'Follow-up: Day 3 sequence' },
-    { id: '4', name: 'Michael Torres', email: 'mtorres@email.com', source: 'Facebook', score: 45, status: 'cold', time: '3h ago', avatar: 'MT', action: 'Nurture: Long-term drip' }
-  ];
-
+const leads = [
+  { id: '1', name: 'Rahul Sharma', email: 'rahul@gmail.com', source: 'Facebook Ads', score: 95, status: 'hot', time: '2m ago', avatar: 'RS', action: 'Call immediately' },
+  { id: '2', name: 'Priya Verma', email: 'priya@gmail.com', source: 'Website Form', score: 88, status: 'hot', time: '10m ago', avatar: 'PV', action: 'Send proposal' },
+  { id: '3', name: 'Amit Singh', email: 'amit@gmail.com', source: 'Google Ads', score: 72, status: 'warm', time: '1h ago', avatar: 'AS', action: 'Follow-up required' },
+  { id: '4', name: 'Neha Gupta', email: 'neha@gmail.com', source: 'Landing Page', score: 48, status: 'cold', time: '3h ago', avatar: 'NG', action: 'Add to nurture campaign' }
+];
   return (
     <section id="showcase" className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-primary-50)]/50">
       <div className="max-w-7xl mx-auto">
@@ -362,36 +361,36 @@ const ShowcaseSection: React.FC = () => {
 
 // 4. Benefits Section
 const BenefitsSection: React.FC = () => {
-  const benefits = [
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "3x Higher Conversions",
-      description: "AI-qualified leads convert at 3x the rate of cold inquiries. Focus your energy on prospects ready to buy, not tire-kickers.",
-      stat: "3x",
-      statLabel: "conversion rate"
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Save 15+ Hours Weekly",
-      description: "Automated lead capture, scoring, and follow-ups eliminate manual data entry and repetitive tasks. Spend time closing, not admin.",
-      stat: "15h",
-      statLabel: "saved weekly"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Zero Lead Leakage",
-      description: "Every inquiry is captured, tagged, and nurtured automatically. Never lose a lead to voicemail or slow response times again.",
-      stat: "100%",
-      statLabel: "capture rate"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Data-Driven Decisions",
-      description: "Real-time analytics show exactly which channels, campaigns, and agents drive the best ROI. Optimize with confidence.",
-      stat: "94%",
-      statLabel: "forecast accuracy"
-    }
-  ];
+ const benefits = [
+  {
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "Increase Conversion Rate",
+    description: "Convert more leads into paying customers using AI automation.",
+    stat: "3X",
+    statLabel: "conversions"
+  },
+  {
+    icon: <Clock className="w-8 h-8" />,
+    title: "Save Time",
+    description: "Automate repetitive tasks and focus only on closing deals.",
+    stat: "15+ hrs",
+    statLabel: "saved weekly"
+  },
+  {
+    icon: <Target className="w-8 h-8" />,
+    title: "Never Miss a Lead",
+    description: "Capture and respond to every lead instantly without manual work.",
+    stat: "100%",
+    statLabel: "lead capture"
+  },
+  {
+    icon: <BarChart3 className="w-8 h-8" />,
+    title: "Better ROI",
+    description: "Optimize campaigns with real-time analytics and insights.",
+    stat: "High",
+    statLabel: "ROI"
+  }
+];
 
   return (
     <section id="benefits" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
@@ -440,36 +439,36 @@ const BenefitsSection: React.FC = () => {
 
 // 5. How It Works Section
 const WorkflowSection: React.FC = () => {
-  const steps = [
-    {
-      number: "01",
-      title: "Capture",
-      description: "Leads flow in automatically from your website, ads, social media, and partner sites. No manual entry, no missed inquiries.",
-      icon: <Users className="w-6 h-6" />,
-      details: ["Website forms", "Facebook & Google Ads", "Zillow & Realtor.com", "Phone & SMS"]
-    },
-    {
-      number: "02",
-      title: "Qualify",
-      description: "AI instantly analyzes each lead for intent, budget, timeline, and fit. Hot leads are flagged immediately for fast action.",
-      icon: <Filter className="w-6 h-6" />,
-      details: ["AI scoring 0-100", "Intent detection", "Budget estimation", "Timeline prediction"]
-    },
-    {
-      number: "03",
-      title: "Track",
-      description: "Every interaction is logged automatically. View complete lead history, communication threads, and deal progress in one place.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      details: ["Activity timeline", "Communication log", "Task automation", "Pipeline stages"]
-    },
-    {
-      number: "04",
-      title: "Convert",
-      description: "AI suggests optimal next steps, drafts personalized follow-ups, and alerts you when leads are ready to buy. Close more deals.",
-      icon: <Zap className="w-6 h-6" />,
-      details: ["Next-best-action AI", "Auto-follow-ups", "Meeting scheduling", "Deal prediction"]
-    }
-  ];
+ const steps = [
+  {
+    number: "01",
+    title: "Capture Leads",
+    description: "Collect leads automatically from ads, landing pages, and websites.",
+    icon: <Users className="w-6 h-6" />,
+    details: ["Facebook Ads", "Google Ads", "Landing Pages", "Website Forms"]
+  },
+  {
+    number: "02",
+    title: "Qualify Leads",
+    description: "AI filters high-quality leads based on interest and intent.",
+    icon: <Filter className="w-6 h-6" />,
+    details: ["AI scoring", "Intent tracking", "Behavior analysis", "Lead ranking"]
+  },
+  {
+    number: "03",
+    title: "Engage Leads",
+    description: "Automate communication via WhatsApp, email, and SMS.",
+    icon: <MessageSquare className="w-6 h-6" />,
+    details: ["Auto replies", "Follow-ups", "Reminders", "Notifications"]
+  },
+  {
+    number: "04",
+    title: "Convert Leads",
+    description: "Close more deals using insights and timely actions.",
+    icon: <Zap className="w-6 h-6" />,
+    details: ["AI suggestions", "Call reminders", "Deal tracking", "Conversion boost"]
+  }
+];
 
   return (
     <section id="workflow" className="py-24 px-4 sm:px-6 lg:px-8 bg-[var(--color-primary-900)] text-white relative overflow-hidden">
@@ -539,15 +538,15 @@ const CTASection: React.FC = () => {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Stop Losing Leads. Start Closing Deals.
+          Ready to Generate More Leads?
         </h2>
         <p className="text-xl text-[var(--color-primary-100)] mb-10 max-w-2xl mx-auto">
-          Join 2,500+ real estate professionals using EstateAI to capture, qualify, and convert leads on autopilot.
+        Join hundreds of businesses using AI to generate and convert leads automatically.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <button className="group w-full sm:w-auto px-10 py-5 bg-white text-[var(--color-primary-700)] rounded-xl font-bold text-lg shadow-2xl hover:shadow-white/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-            Get Started Free
+          Start Generating Leads
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button className="w-full sm:w-auto px-10 py-5 bg-transparent text-white border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/10 hover:border-white/50 transition-all duration-300">

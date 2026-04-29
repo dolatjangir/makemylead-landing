@@ -44,7 +44,7 @@ const howItWorks = [
   {
     num: "01",
     title: "AI Builds the Strategy",
-    desc: "Defines goals, audience segments, messaging, and channel mix — before a single word is written.",
+    desc: "Identifies your ideal customers and builds precise targeting to attract high-quality leads.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" strokeLinecap="round" strokeLinejoin="round"/>
@@ -87,7 +87,7 @@ const howItWorks = [
 const features = [
   {
     title: "AI Ad Copy Generation",
-    desc: "High-converting headlines, descriptions, and CTAs written in seconds — A/B variants included.",
+    desc: "Creates irresistible lead magnets, landing pages, and forms that convert visitors into leads.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" strokeLinecap="round" strokeLinejoin="round"/>
@@ -130,7 +130,7 @@ const features = [
 
 const agents = [
   {
-    name: "AI Campaign Automation Agent",
+    name: "AI Lead Generation Agent",
     role: "Owns the full campaign lifecycle — strategy, scheduling, budget allocation, and performance loops.",
     tag: "Automation",
     emoji: "⚡",
@@ -139,7 +139,7 @@ const agents = [
     border: "#99ccff",
   },
   {
-    name: "AI Content Creation Agent",
+    name: "AI Lead Funnel Agent",
     role: "Generates ad copy, email sequences, landing page text, and social captions tailored to each audience.",
     tag: "Content",
     emoji: "✍️",
@@ -148,7 +148,7 @@ const agents = [
     border: "#66b2ff",
   },
   {
-    name: "AI Social Media Agent",
+    name: "AI Outreach & Follow-up Agent",
     role: "Schedules and publishes across all platforms, monitors engagement, and adjusts posting times in real time.",
     tag: "Social",
     emoji: "📢",
@@ -176,19 +176,19 @@ const platforms = [
 ];
 
 const campaignStats = [
-  { value: "12×", label: "Faster campaign launch" },
-  { value: "340%", label: "Average ROAS improvement" },
+  { value: "12×", label: "Faster lead generation setup" },
+  { value: "340%", label: "Increase in qualified leads" },
   { value: "68%", label: "Reduction in ad spend waste" },
-  { value: "24/7", label: "Continuous optimisation" },
+  { value: "24/7", label: "Lower cost per lead (CPL)" },
 ];
 
 const workflowSteps = [
-  { title: "Brief Input", desc: "Enter goal, budget & audience", icon: "📋", done: true },
-  { title: "Strategy Draft", desc: "AI builds full campaign plan", icon: "🧠", done: true },
-  { title: "Content Created", desc: "Copy, visuals & variants ready", icon: "✍️", done: true },
+  { title: "Enter Business Details", desc: "Enter goal, budget & audience", icon: "📋", done: true },
+  { title: "Audience Targeting Setup", desc: "AI builds full campaign plan", icon: "🧠", done: true },
+  { title: "Audience Targeting Setup", desc: "Copy, visuals & variants ready", icon: "✍️", done: true },
   { title: "Review & Approve", desc: "One-click approval flow", icon: "✅", done: false },
-  { title: "Multi-Platform Launch", desc: "Deployed across all channels", icon: "🚀", done: false },
-  { title: "Live Optimisation", desc: "AI monitors & auto-adjusts", icon: "📈", done: false },
+  { title: "Lead Capture Activated", desc: "Deployed across all channels", icon: "🚀", done: false },
+  { title: "Lead Nurturing & Follow-ups", desc: "AI monitors & auto-adjusts", icon: "📈", done: false },
 ];
 
 /* ─────────────────────────────────────────────
@@ -300,37 +300,37 @@ export default function AICampaignPage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium mb-7"
                 style={{ background: "#fff", borderColor: "#99ccff", color: "#0066cc" }}>
                 <span className="w-2 h-2 rounded-full ping-dot" style={{ background: "#0066cc" }} />
-                AI Campaign Automation
+             AI Lead Generation System
               </div>
 
               <h1
                 className="font-extrabold leading-tight tracking-tight mb-6"
                 style={{ fontFamily: "'Sora',sans-serif", fontSize: "clamp(2.2rem,5vw,3.7rem)", color: "#002b57" }}
               >
-                Run High-Converting
+              Generate High-Quality
                 <br />
-                <span style={{ color: "#0066cc" }}>Campaigns on Autopilot</span>
+                <span style={{ color: "#0066cc" }}> Leads on Autopilot</span>
               </h1>
 
               <p className="text-lg leading-relaxed mb-10 max-w-lg" style={{ color: "#1d5aa6" }}>
-                From strategy and content creation to multi-platform execution and real-time
-                optimisation — your entire campaign runs itself, without lifting a finger.
+               From finding your ideal audience to capturing and nurturing leads — 
+our AI system handles everything automatically so you get consistent, high-quality leads every day.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <button className="btn-primary px-8 py-4 rounded-xl text-white font-semibold text-base"
                   style={{ background: "#0066cc" }}>
-                  Launch Your First AI Campaign
+                  Start Generating Leads
                 </button>
                 <button className="btn-outline px-8 py-4 rounded-xl font-semibold text-base border-2"
                   style={{ borderColor: "#99ccff", color: "#0066cc", background: "white" }}>
-                  See Live Demo →
+                 See How It Works →
                 </button>
               </div>
 
               {/* platform pills */}
               <div className="mt-9 flex flex-wrap gap-2">
-                {["Google Ads", "Meta", "Instagram", "LinkedIn", "Email", "WhatsApp"].map((p) => (
+                {["Google Leads", "Facebook Leads", "Landing Pages", "Email Funnels", "CRM", "WhatsApp Automation"].map((p) => (
                   <span key={p} className="text-xs font-medium px-3 py-1.5 rounded-full border"
                     style={{ borderColor: "#cce5ff", color: "#0057ad", background: "#fff" }}>
                     {p}
@@ -653,7 +653,7 @@ export default function AICampaignPage() {
               <div className="flex items-center justify-between mb-8">
                 <h3 className="font-bold text-base"
                   style={{ fontFamily: "'Sora',sans-serif", color: "#002b57" }}>
-                  Daily Conversions
+                 Daily Leads Generated
                 </h3>
                 <span className="text-xs font-semibold px-3 py-1 rounded-full"
                   style={{ background: "#e6f2ff", color: "#0066cc" }}>This Week</span>
@@ -685,7 +685,7 @@ export default function AICampaignPage() {
             <div className="rounded-3xl border-2 p-8" style={{ background: "#fff", borderColor: "#cce5ff" }}>
               <h3 className="font-bold text-base mb-6"
                 style={{ fontFamily: "'Sora',sans-serif", color: "#002b57" }}>
-                Platform Performance
+                Lead Source Performance
               </h3>
 
               <div className="space-y-3">
@@ -748,8 +748,8 @@ export default function AICampaignPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { icon: "⚡", msg: "Budget reallocated to Instagram — +28% CTR", time: "2 min ago", color: "#0066cc", bg: "#e6f2ff" },
-                { icon: "🎯", msg: "New A/B variant outperforming control by 41%", time: "5 min ago", color: "#0057ad", bg: "#cce5ff" },
+                { icon: "⚡", msg: "More budget allocated to high-converting lead source", time: "2 min ago", color: "#0066cc", bg: "#e6f2ff" },
+                { icon: "🎯", msg: "New landing page generating 40% more leads", time: "5 min ago", color: "#0057ad", bg: "#cce5ff" },
                 { icon: "📊", msg: "Google Ads bid adjusted — CPL dropped ₹84", time: "11 min ago", color: "#00478f", bg: "#b3d5ff" },
                 { icon: "🔔", msg: "Campaign milestone: 1,000 conversions hit", time: "18 min ago", color: "#003871", bg: "#8dc0ff" },
               ].map((ev) => (
@@ -789,19 +789,18 @@ export default function AICampaignPage() {
 
               <h2 className="text-3xl font-extrabold text-white mb-5 leading-tight"
                 style={{ fontFamily: "'Sora',sans-serif" }}>
-                Your competitors are already
-                <br />running AI campaigns.
+            Your competitors are already
+                <br /> capturing your leads.
               </h2>
 
               <p className="text-base mb-10" style={{ color: "#b3d5ff" }}>
-                Launch your first fully automated campaign in under 10 minutes —
-                no agency, no manual effort, just results on autopilot.
+              Start generating high-quality leads in minutes — no agency, no manual work, just consistent growth.
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
                 <button className="btn-primary px-9 py-4 rounded-xl font-semibold text-base"
                   style={{ background: "white", color: "#0066cc" }}>
-                  Launch AI Campaign Now
+                 Start Getting Leads Now
                 </button>
                 <button className="px-9 py-4 rounded-xl font-semibold text-base border-2 transition-colors"
                   style={{
@@ -809,7 +808,7 @@ export default function AICampaignPage() {
                     color: "white",
                     background: "rgba(255,255,255,0.08)",
                   }}>
-                  Book a Strategy Call
+                Book a Free Lead Strategy Call
                 </button>
               </div>
 

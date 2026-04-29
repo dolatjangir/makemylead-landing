@@ -35,12 +35,11 @@ function useInView(threshold = 0.15) {
 const funnelSteps = [
   {
     step: "01",
-    label: "Capture Leads",
-    desc: "Smart forms & landing pages collect every prospect the moment they arrive.",
-    icon: (
+    label: "Attract Audience",
+    desc: "We drive targeted traffic through Google Ads, social media, and SEO strategies.",
+      icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-        <path d="M12 8v4l3 3" strokeLinecap="round" />
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     bg: "#e6f2ff",
@@ -50,12 +49,12 @@ const funnelSteps = [
   },
   {
     step: "02",
-    label: "Qualify Leads",
-    desc: "AI filters serious prospects from noise — scoring intent in real time.",
+    label: "Capture Leads",
+    desc: "High-converting landing pages and forms turn visitors into real leads.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="12" cy="12" r="9" />
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+        <path d="M12 8v4l3 3" strokeLinecap="round" />
       </svg>
     ),
     bg: "#dbeafe",
@@ -65,13 +64,12 @@ const funnelSteps = [
   },
   {
     step: "03",
-    label: "Match Solutions",
-    desc: "AI recommends the best-fit property or service for every unique lead.",
-    icon: (
+    label: "Nurture & Qualify",
+    desc: "Automated follow-ups and smart filtering ensure only high-intent leads move forward.",
+     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path d="M4 6h16M4 10h10M4 14h7" strokeLinecap="round" />
-        <circle cx="18" cy="16" r="3" />
-        <path d="M20.5 18.5L22 20" strokeLinecap="round" />
+        <path d="M9 12l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12" cy="12" r="9" />
       </svg>
     ),
     bg: "#cce5ff",
@@ -81,11 +79,13 @@ const funnelSteps = [
   },
   {
     step: "04",
-    label: "Convert",
-    desc: "Automated follow-ups & personalised nudges turn warm leads into customers.",
+    label: "Convert to Customers",
+    desc: "Optimized funnels and strategies turn leads into paying customers consistently.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 6h16M4 10h10M4 14h7" strokeLinecap="round" />
+        <circle cx="18" cy="16" r="3" />
+        <path d="M20.5 18.5L22 20" strokeLinecap="round" />
       </svg>
     ),
     bg: "#b3d5ff",
@@ -97,18 +97,18 @@ const funnelSteps = [
 
 const features = [
   {
-    title: "Smart Lead Scoring",
-    desc: "Every lead is scored automatically based on behaviour, source, and intent signals.",
-    icon: (
+    title: "Paid Advertising",
+    desc: "Generate leads through high-performing Google Ads and social media campaigns.",
+     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
-    title: "Auto Segmentation",
-    desc: "Leads are sorted into the right buckets without lifting a finger.",
-    icon: (
+    title: "Lead Tracking",
+    desc: "Track every lead and understand exactly where your conversions come from.",
+     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <circle cx="9" cy="7" r="4" />
         <circle cx="17" cy="17" r="4" />
@@ -117,18 +117,18 @@ const features = [
     ),
   },
   {
-    title: "Personalised Recommendations",
-    desc: "Your AI agent surfaces the right solution for every prospect's profile.",
-    icon: (
+    title: "Lead Qualification",
+    desc: "Filter out low-quality leads and focus only on high-intent prospects.",
+  icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
-    title: "Conversion Tracking",
-    desc: "Real-time dashboards show exactly where revenue comes from at every stage.",
-    icon: (
+    title: "Conversion Optimization",
+    desc: "Improve landing pages and funnels to increase conversion rates.",
+   icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-6 h-6">
         <rect x="3" y="3" width="18" height="18" rx="2" />
         <path d="M3 9h18M9 21V9" strokeLinecap="round" />
@@ -139,26 +139,26 @@ const features = [
 
 const agents = [
   {
-    name: "AI Lead Capture Agent",
-    role: "Collects & organises every inbound lead from any channel — forms, chat, ads.",
-    tag: "Capture",
-    emoji: "📥",
+    name: "Paid Ads Management",
+    role: "We run high-converting campaigns on Google, Facebook, and Instagram to generate targeted leads.",
+    tag: "Traffic",
+    emoji: "📢",
     color: "#0066cc",
     bg: "#e6f2ff",
   },
   {
-    name: "AI Lead Qualification Agent",
-    role: "Scores, filters, and ranks leads by purchase intent and fit — instantly.",
-    tag: "Qualify",
-    emoji: "🔍",
+    name: "Landing Page & Funnel Optimization",
+    role: "We design and optimize landing pages that convert visitors into high-quality leads.",
+    tag: "Conversion",
+    emoji: "📄",
     color: "#0057ad",
     bg: "#cce5ff",
   },
   {
-    name: "AI Property Matching Agent",
-    role: "Matches each qualified lead to the most relevant property or solution.",
-    tag: "Match",
-    emoji: "🏠",
+    name: "Lead Nurturing & CRM Automation",
+    role: "We automate follow-ups, emails, and CRM workflows to convert leads into customers.",
+    tag: "Growth",
+    emoji: "📈",
     color: "#003871",
     bg: "#b3d5ff",
   },
@@ -329,18 +329,18 @@ export default function AILeadFunnelPage() {
               color: "#002b57",
             }}
           >
-            Build a Fully Automated
-            <br />
-            <span style={{ color: "#0066cc" }}>AI Lead Funnel</span>
+          Build a Predictable
+<br />
+<span style={{ color: "#0066cc" }}>Lead Generation Engine</span>
           </h1>
 
           <p
             className="max-w-2xl mx-auto text-lg leading-relaxed mb-10"
             style={{ color: "#1d5aa6" }}
           >
-            From first click to conversion — your entire funnel runs on autopilot.
-            Capture, qualify, and convert leads with three specialised AI agents
-            working 24 / 7.
+           Generate consistent, high-quality
+            leads for your business using proven strategies, 
+            paid campaigns, and optimized funnels — designed to turn traffic into real customers.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -348,7 +348,7 @@ export default function AILeadFunnelPage() {
               className="cta-btn-primary px-8 py-4 rounded-xl text-white font-semibold text-base"
               style={{ background: "#0066cc" }}
             >
-              Start Automating Free
+              Start Generating Leads
             </button>
             <button
               className="cta-btn-outline px-8 py-4 rounded-xl font-semibold text-base border-2"
@@ -361,10 +361,10 @@ export default function AILeadFunnelPage() {
           {/* stats */}
           <div className="mt-16 flex flex-wrap justify-center gap-10">
             {[
-              ["3×", "faster lead response time"],
-              ["87%", "qualification accuracy"],
-              ["40%", "higher conversion rate"],
-            ].map(([num, label]) => (
+  ["3×", "more qualified leads"],
+  ["70%", "lower cost per lead"],
+  ["2.5×", "higher conversion rate"],
+].map(([num, label]) => (
               <div key={label} className="text-center">
                 <div
                   className="text-3xl font-extrabold"
@@ -474,7 +474,7 @@ export default function AILeadFunnelPage() {
                 fontFamily: "'Sora',sans-serif",
               }}
             >
-              🎯 Conversion Complete
+             🎯 Lead Converted Successfully
             </div>
           </FadeIn>
         </div>
@@ -499,10 +499,10 @@ export default function AILeadFunnelPage() {
               className="mt-4 text-3xl font-extrabold"
               style={{ fontFamily: "'Sora',sans-serif", color: "#002b57" }}
             >
-              Meet Your Automation Team
+             Our Lead Generation Services
             </h2>
             <p className="mt-3 text-base max-w-xl mx-auto" style={{ color: "#1d5aa6" }}>
-              Three specialised AI agents that collaborate seamlessly inside your funnel.
+            We use a combination of marketing strategies and automation to generate, qualify, and convert leads for your business.
             </p>
           </FadeIn>
 
@@ -614,10 +614,11 @@ export default function AILeadFunnelPage() {
             className="mt-4 text-3xl font-extrabold"
             style={{ fontFamily: "'Sora',sans-serif", color: "#002b57" }}
           >
-            Everything Your Funnel Needs
+          Track and Optimize Your Leads
           </h2>
           <p className="mt-3 text-base max-w-lg mx-auto" style={{ color: "#1d5aa6" }}>
-            From first touch to closed deal — every tool is baked in and automated.
+           Understand how your leads move through the funnel, identify drop-offs,
+            and continuously improve your campaigns for better ROI.
           </p>
         </FadeIn>
 
@@ -679,12 +680,13 @@ export default function AILeadFunnelPage() {
                     className="text-2xl font-extrabold mb-4"
                     style={{ fontFamily: "'Sora',sans-serif", color: "#002b57" }}
                   >
-                    Real-time visibility
-                    <br />at every stage
+                Ready to Generate More Leads
+<br />
+and Grow Your Business?
                   </h3>
                   <p className="text-sm leading-relaxed" style={{ color: "#1d5aa6" }}>
-                    Know exactly where leads drop off, which agent closes best, and
-                    how to optimise your funnel for maximum ROI — updated live.
+                   Start generating consistent, high-quality leads with our proven 
+                   lead generation strategies. No guesswork — just real results.
                   </p>
                 </div>
 

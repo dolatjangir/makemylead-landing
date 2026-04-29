@@ -104,43 +104,43 @@ const FeaturesSection: React.FC = () => {
   const features = [
     {
       icon: <Rocket className="w-6 h-6" />,
-      title: "Campaign Automation",
-      description: "Launch complete marketing campaigns across multiple channels with one click. AI handles targeting, scheduling, and deployment automatically.",
+     title: "Lead Capture Funnels",
+description: "We create high-converting landing pages designed to capture maximum leads with proven layouts and psychology.",
       color: "from-[var(--color-primary-500)] to-[var(--color-primary-600)]",
       badge: "One-Click"
     },
     {
       icon: <Share2 className="w-6 h-6" />,
-      title: "Social Media Automation",
-      description: "Auto-post to Facebook, Instagram, LinkedIn, and Twitter. AI optimizes timing, hashtags, and content for maximum engagement on each platform.",
+     title: "Paid Ads Management",
+description: "Run high-performing Facebook & Google ads that bring real buyers to your business — not just traffic.",
       color: "from-[var(--color-secondary-500)] to-[var(--color-secondary-600)]",
       badge: "Multi-Platform"
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email Marketing Automation",
-      description: "Smart email sequences that nurture leads from first contact to closing. AI personalizes content, subject lines, and send times for best results.",
+     title: "WhatsApp & CRM Automation",
+description: "Instantly respond to leads with automated WhatsApp messages and CRM workflows so you never miss an opportunity.",
       color: "from-[var(--color-primary-400)] to-[var(--color-primary-500)]",
       badge: "Smart Sequences"
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      title: "AI Content Generation",
-      description: "Generate listing descriptions, blog posts, social captions, and ad copy in seconds. AI creates engaging, SEO-optimized content tailored to your brand.",
+      title: "Content That Converts",
+description: "We create ad copy, creatives, and content that attracts attention and turns visitors into leads.",
       color: "from-[var(--color-secondary-400)] to-[var(--color-secondary-500)]",
       badge: "Instant"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Ad Optimization",
-      description: "AI manages your Facebook and Google Ads budgets, targeting, and creative. Automatically A/B tests and scales winning campaigns for maximum ROI.",
+      title: "Smart Targeting",
+description: "Reach the right audience with data-driven targeting strategies that reduce cost and increase conversions.",
       color: "from-[var(--color-primary-600)] to-[var(--color-primary-700)]",
       badge: "Auto-Optimize"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Marketing",
-      description: "Orchestrate seamless campaigns across email, social, SMS, and ads from one dashboard. Consistent messaging, unified analytics, zero complexity.",
+    title: "Smart Targeting",
+description: "Reach the right audience with data-driven targeting strategies that reduce cost and increase conversions.",
       color: "from-[var(--color-secondary-600)] to-[var(--color-secondary-700)]",
       badge: "Unified"
     }
@@ -491,34 +491,34 @@ const BenefitsSection: React.FC = () => {
   const benefits = [
     {
       icon: <Eye className="w-8 h-8" />,
-      title: "10x Your Reach",
-      description: "AI optimizes targeting and timing to put your listings in front of the right buyers at the right moment. Expand your audience without expanding your budget.",
-      stat: "10x",
-      statLabel: "more visibility",
+     title: "Get More Visibility",
+description: "Reach thousands of potential customers daily through optimized ad campaigns and funnels.",
+stat: "5x",
+statLabel: "more reach",
       details: ["Smart targeting", "Optimal timing", "Cross-channel reach"]
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Generate 3x More Leads",
-      description: "Automated campaigns capture and nurture leads 24/7. AI identifies high-intent prospects and routes them to you instantly, ready to convert.",
-      stat: "3x",
-      statLabel: "more leads",
+     title: "Increase Lead Flow",
+description: "Generate consistent daily leads instead of waiting for random inquiries.",
+stat: "3x",
+statLabel: "more leads",
       details: ["24/7 capture", "Auto-nurture", "Instant routing"]
     },
     {
       icon: <MousePointer className="w-8 h-8" />,
-      title: "Double Your Engagement",
-      description: "AI-generated content resonates with your audience. Personalized messaging, perfect timing, and A/B testing drive higher click and response rates.",
-      stat: "2x",
-      statLabel: "higher engagement",
+     title: "Better Conversion Rate",
+description: "Turn more visitors into paying customers with optimized funnels and follow-ups.",
+stat: "2x",
+statLabel: "higher conversion",
       details: ["AI content", "Personalization", "Auto A/B testing"]
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Save 25+ Hours Weekly",
-      description: "Eliminate manual posting, copywriting, and campaign management. AI handles everything from content creation to performance optimization.",
-      stat: "25h",
-      statLabel: "saved weekly",
+      title: "Save Time & Effort",
+description: "We handle ads, funnels, and automation — so you focus on closing deals.",
+stat: "20h+",
+statLabel: "saved weekly",
       details: ["Auto-content", "Self-optimizing", "Hands-free"]
     }
   ];
@@ -586,29 +586,29 @@ const WorkflowSection: React.FC = () => {
   const steps = [
     {
       number: "01",
-      title: "Define Your Goals",
-      description: "Set campaign objectives, target audience, and budget. AI analyzes your market and recommends optimal strategies for maximum impact.",
+      title: "Tell Us Your Business",
+      description: "We understand your goals, audience, and offer.",
       icon: <Target className="w-6 h-6" />,
       color: "from-[var(--color-primary-400)] to-[var(--color-primary-600)]"
     },
     {
       number: "02",
-      title: "AI Generates Content",
-      description: "AI creates compelling copy, designs visuals, and builds campaign assets tailored to each channel—email, social, ads, and more.",
+      title: "We Build Your Funnel",
+      description:"Landing pages, ads, and automation setup done for you.",
       icon: <Sparkles className="w-6 h-6" />,
       color: "from-[var(--color-secondary-400)] to-[var(--color-secondary-600)]"
     },
     {
       number: "03",
-      title: "Auto-Distribute",
-      description: "Campaigns deploy across all selected channels at optimal times. AI manages scheduling, posting, and ad placement automatically.",
+      title: "We Launch Campaigns",
+      description: "Start generating leads from Facebook & Google instantly.",
       icon: <Send className="w-6 h-6" />,
       color: "from-[var(--color-primary-500)] to-[var(--color-primary-700)]"
     },
     {
       number: "04",
-      title: "Optimize & Scale",
-      description: "Real-time analytics track performance. AI A/B tests creatives, adjusts budgets, and scales winning campaigns for best ROI.",
+      title: "You Close Deals",
+      description: "We help you convert leads into real customers.",
       icon: <BarChart3 className="w-6 h-6" />,
       color: "from-[var(--color-secondary-500)] to-[var(--color-secondary-700)]"
     }
