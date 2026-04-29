@@ -8,7 +8,7 @@ const StayPilotLanding = () => {
   
   return (
     <div>
-    hello world!
+   <Home/>
     </div>
   )
    
