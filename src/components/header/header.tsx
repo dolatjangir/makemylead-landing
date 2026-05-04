@@ -311,12 +311,7 @@ const navItems: NavItem[] = [
               description: "Join the conversation",
               href: "/resources/community"
             },
-            {
-              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335515/contact-support-icon_bmjjs7.png" className="max-w-10 max-h-10" />,
-              title: "Contact Us",
-              description: "24/7 expert assistance",
-              href: "/contact-us"
-            },
+           
               {
               icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335509/customer-engage-icon_vafyry.png" className="max-w-10 max-h-10" />,
               title: "Pricing",
@@ -336,13 +331,8 @@ const navItems: NavItem[] = [
     }
   },
    {
-              label: "Associates",
-              href: "/broker-network",
-               hasDropdown: false,
-            },
-            {
-              label: "Property",
-              href: "/properties",
+              label: "Contact-us",
+              href: "/contact-us",
                hasDropdown: false,
             }
 ];

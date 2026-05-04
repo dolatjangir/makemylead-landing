@@ -23,8 +23,8 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata : Metadata ={
    // 👇 keep global defaults here
     title: {
-      default: "Estate AI",
-      template: "%s | Estate AI",
+      default: "MakeMyLead",
+      template: "%s | MakeMyLead",
     },
 
     manifest: "/manifest.json",
