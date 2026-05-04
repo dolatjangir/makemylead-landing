@@ -606,7 +606,7 @@ export default function HelpCenterPage() {
       </Head>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[var(--color-primary-600)] to-[var(--color-secondary-600)] pt-8 text-white">
+      <div className="bg-[url('/assets/help-center-bg.png')]  pt-8 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[var(--color-primary-50)]">How can we help you?</h1>

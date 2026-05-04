@@ -293,7 +293,7 @@ export default function HowItWorksPage() {
                     <Globe className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-[var(--color-primary-900)]">EstateAI Frontend (Next.js)</h3>
+                    <h3 className="text-lg font-bold text-[var(--color-primary-900)]">MakeMyLead Frontend (Next.js)</h3>
                     <p className="text-sm text-gray-600">Property Listings • Lead Forms</p>
                   </div>
                 </div>
@@ -492,7 +492,7 @@ export default function HowItWorksPage() {
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-[var(--color-primary-920)] mb-4">
-              The EstateAI Workflow
+              The MakeMyLeads Workflow
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-gray-600 max-w-2xl mx-auto">
               From first contact to closed deal—fully automated and optimized
@@ -653,7 +653,7 @@ export default function HowItWorksPage() {
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold text-[var(--color-primary-920)] mb-4">
-              Why Choose EstateAI?
+              Why Choose MakeMyLead?
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-gray-600 max-w-2xl mx-auto">
               Transform your real estate business with AI-powered automation
@@ -701,7 +701,7 @@ export default function HowItWorksPage() {
               Ready to Transform Your Real Estate Business?
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join hundreds of real estate professionals using EstateAI to automate their workflow and close more deals.
+              Join hundreds of real estate professionals using MakeMyLead to automate their workflow and close more deals.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
                <Link href="/register"> 
