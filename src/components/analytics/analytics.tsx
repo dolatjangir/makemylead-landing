@@ -31,7 +31,7 @@ const automations: AutomationItem[] = [
       'Instantly responds to enquiries, qualifies prospects, and keeps conversations active — even when you’re offline.',
     imageSrc: '/assets/crmdash-robo.png',
     imageAlt: 'AI Lead Engagement Assistant',
-    variant: 'support',
+    variant: 'assistant',
   },
   {
     id: 'meeting-agent',
@@ -40,7 +40,7 @@ const automations: AutomationItem[] = [
       'Automatically books calls, schedules follow-ups, and ensures no hot lead ever slips through the cracks.',
     imageSrc: '/assets/half-robo.png',
     imageAlt: 'AI Scheduling Assistant',
-    variant: 'meeting',
+    variant: 'assistant',
   },
 ];
 const getVariantStyles = (variant: string): string => {
@@ -57,7 +57,7 @@ function HomeAutomationsPage(): React.JSX.Element {
 
   return (
    <main className="min-h-screen ">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-7xl mx-auto px-0 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 gap-6 lg:gap-8">
       {/* First Box - Full Width with Content Left, Image Right */}
     <div
@@ -185,7 +185,7 @@ const Analytics = () => {
   
   return (
     <>
-    <section id="analytics" className="py-20 ">
+    <section id="analytics" className="py-20 bg-white sm:bg-gradient-to-b sm:from-slate-50 sm:via-white sm:to-slate-50">
       <div className="container mx-auto px-4">
         <h2 className="font-['var(--font-head)]  text-[var(--color-primary-600)]  text-3xl md:text-5xl text-center mb-4">
           Your Complete AI Lead Generation System
@@ -216,7 +216,7 @@ const Analytics = () => {
       </div>
     </section>
      {/* How It Works */}
-        <section id="how-it-works" className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50">
+        <section id="how-it-works" className="py-24 relative overflow-hidden bg-white sm:bg-gradient-to-b sm:from-slate-50 sm:via-white sm:to-slate-50">
   {/* Background AI Grid Pattern */}
   <div className="absolute inset-0 opacity-[0.03]">
     <div className="absolute inset-0" style={{
@@ -389,7 +389,7 @@ const Analytics = () => {
 
     {/* Bottom AI Assistant CTA */}
     <div className="mt-20 text-center">
-      <div className="inline-flex items-center gap-4 px-8 py-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 
+      <div className="inline-flex items-center gap-4 px-5 sm:px-8 py-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 
                       shadow-2xl shadow-slate-900/20 hover:shadow-slate-900/30 transition-all duration-300
                       group cursor-pointer">
         {/* Small Robot Avatar */}
@@ -410,16 +410,16 @@ const Analytics = () => {
         </div>
         
         <div className="text-left">
-        <p className="text-white font-semibold text-lg">
+        <p className="text-white font-semibold text-sm sm:text-lg">
   Want to see how it works?
 </p>
 
-<p className="text-slate-400 text-sm">
+<p className="text-slate-400 text-xs sm:text-sm">
   Let our AI guide you and start generating leads today
 </p>
         </div>
         
-        <div className="ml-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center
+        <div className="ml-4 min-w-10 min-h-10 rounded-full bg-white/10 flex items-center justify-center
                         group-hover:bg-white/20 transition-colors">
           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
