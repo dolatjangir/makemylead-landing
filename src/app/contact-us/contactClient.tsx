@@ -142,7 +142,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             {/* Contact Info Cards */}
             <div className="space-y-4">
               {[
-                { icon: Mail, label: 'Email', value: 'info@estateai.in', href: 'mailto:info@estateai.in' },
+                { icon: Mail, label: 'Email', value: 'info@makemylead.com', href: 'mailto:info@makemylead.com' },
                 { icon: Phone, label: 'Phone', value: '+91 9649902000', href: 'tel:+919649902000' },
                 {  icon: MessageCircle, label: 'Support', value: '24/7 AI Support Available', href: '/explore-ai-agent'  },
               ].map((item, idx) => {

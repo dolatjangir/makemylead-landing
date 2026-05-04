@@ -513,14 +513,14 @@ onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
           <button className="text-[var(--text-secondary)] hover:text-[var(--color-primary-600)] font-medium transition-colors duration-[var(--duration-fast)]">
             Log in
           </button></Link>
-          <Link href="/add-requirement">
+          <Link href="/book-demo">
           <button
             className="px-[var(--space-6)] py-[var(--space-2)] bg-[var(--color-primary-600)] hover:bg-[var(--color-primary-700)] text-[var(--text-inverse)] font-semibold rounded-lg transition-all duration-[var(--duration-fast)] shadow-lg hover:shadow-xl"
             style={{
               boxShadow: "0 10px 15px -3px var(--color-primary-600)/25",
             }}
           >
-          Add Requirement
+          Demo Request
           </button></Link>
         </div>
 
@@ -646,9 +646,9 @@ onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
         Log in
       </button>
     </Link>
-    <Link href="/add-requirement">
+    <Link href="/book-demo">
       <button className="w-full py-[var(--space-3)] bg-[var(--color-primary-600)] text-[var(--text-inverse)] font-semibold rounded-[var(--radius-xl)] mt-2">
-        Add Requirements
+       Demo Request
       </button>
     </Link>
   </div>

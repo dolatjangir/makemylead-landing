@@ -129,7 +129,7 @@ const FAQS: FaqItem[] = [
   {
     question: "Is my data secure?",
     answer:
-      "EstateAI is SOC 2 Type II certified, encrypted at rest and in transit, and hosted on ISO 27001-compliant infrastructure. Your data is never used to train models for other clients.",
+      "makemylead is SOC 2 Type II certified, encrypted at rest and in transit, and hosted on ISO 27001-compliant infrastructure. Your data is never used to train models for other clients.",
   },
 ];
 
@@ -575,7 +575,7 @@ export default function PricingSection() {
         <div className="text-center mt-16 pt-16 border-t border-[#cce5ff]/60">
           <p className="text-sm text-[#5580a8] mb-6">
             <span className="font-bold text-[#001e42]">2,500+</span> property
-            managers across India trust EstateAI
+            managers across India trust MakeMyLead
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button

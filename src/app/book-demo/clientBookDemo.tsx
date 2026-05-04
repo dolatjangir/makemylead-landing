@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { 
   CheckCircle2, 
   Clock, 
@@ -528,6 +528,19 @@ Message: ${formData.message || "N/A"}
     setIsSubmitting(false);
   }
 };
+ useEffect(() => {
+  const timer = setTimeout(() => {
+    const section = document.getElementById('demo-form');
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, 1000); // ⏱️ delay (1 second)
+
+  return () => clearTimeout(timer); // cleanup
+}, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -544,7 +557,7 @@ Message: ${formData.message || "N/A"}
             <span className="text-xs font-semibold text-[#0066cc] tracking-wide uppercase">Live Demos Available Today</span>
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-5">
-            See Estate AI in your{" "}
+            See makemylead AI in your{" "}
             <span className="bg-gradient-to-r from-[#0066cc] to-[#0052a3] bg-clip-text text-transparent">
               workflow
             </span>
@@ -593,7 +606,7 @@ Message: ${formData.message || "N/A"}
         </div>
 
         {/* Booking Form - Centered */}
-        <div className="max-w-2xl mx-auto mb-20">
+        <div id="demo-form" className="max-w-2xl mx-auto mb-20 ">
           <div className="bg-white rounded-3xl border border-gray-200 shadow-2xl shadow-slate-200/60 px-4 py-8 sm:p-10">
             {!isSuccess ? (
               <>
