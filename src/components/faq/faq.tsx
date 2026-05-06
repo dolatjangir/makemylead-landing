@@ -206,7 +206,7 @@ export default function FaqSection() {
 
                       {/* Category tag */}
                       <span
-                        className="hidden sm:inline-flex items-center gap-1.5 text-[10px] font-mono font-bold tracking-widest uppercase px-2.5 py-1 rounded-full flex-shrink-0"
+                        className="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold tracking-widest uppercase px-2.5 py-1 rounded-full flex-shrink-0"
                         style={{
                           background: isOpen
                             ? "var(--color-primary-100)"

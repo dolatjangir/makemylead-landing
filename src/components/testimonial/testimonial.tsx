@@ -448,7 +448,7 @@ const TestimonialsSection: FC = () => {
           </div>
 
           {/* ── Grid ── */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: 16 }}>
             {TESTIMONIALS.map((t, i) => (
               <TestimonialCard
                 key={t.id}
