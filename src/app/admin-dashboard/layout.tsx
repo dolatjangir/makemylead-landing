@@ -39,7 +39,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <div className="p-4 border-b border-neutral-200 flex-shrink-0">
            <Link href="/">  <div className="flex items-center gap-3">
               <img 
-                src="/assets/estateai.png" 
+                src="/assets/makemylead-logo.png" 
                 alt="EstateAI" 
                 className=" object-cover"
               />
