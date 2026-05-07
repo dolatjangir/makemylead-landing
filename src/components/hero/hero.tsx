@@ -25,7 +25,8 @@ function Hero() {
     <div>
          {/* Hero Section */}
             <section className="relative mt-12 pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
-              <div className="absolute inset-0 bg-[url('/assets/makemylead-hero-small-1.png')] sm:bg-[url('/assets/makemylead-hero-desktop.png')] bg-center bg-cover lg:h-screen after:bg-slate-900/50 after:absolute after:top-0 after:left-0 after:w-full after:h-full bg-no-repeat " />
+             <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-primary-700)] lg:h-screen after:bg-slate-900/50 after:absolute after:top-0 after:left-0 after:w-full after:h-full" />
+
               <div className="absolute top-0 right-0 w-1/2 h-full  to-transparent " />
               
               <div className="relative w-full h-full  px-[var(--space-4)] sm:px-[var(--space-6)] lg:px-[var(--space-8)]">
