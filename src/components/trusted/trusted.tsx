@@ -13,22 +13,22 @@ const cards: Card[] = [
   {
     title: "AI Lead Qualification",
     desc: "Automatically identifies high-intent leads so you spend time only on people ready to convert.",
-    img: "https://res.cloudinary.com/djipgt6vc/image/upload/v1775477233/lead-generation-active-robo_mu4ybt.png",
+    img: "/assets/AI-lead-qualification.png",
   },
   {
     title: "Smart Lead Matching",
     desc: "Connects each lead with the right offer or service based on their behavior and needs.",
-    img: "https://res.cloudinary.com/djipgt6vc/image/upload/v1775479263/property-robo_vtrnqk.png",
+    img: "/assets/property-maching-img.png",
   },
   {
     title: "Multi-Channel Lead Capture",
     desc: "Capture leads from your website, ads, WhatsApp, and landing pages — all in one place.",
-    img: "https://res.cloudinary.com/djipgt6vc/image/upload/v1775558338/lead_generation_active_kk7zvz.png",
+    img: "/assets/multimedia-channel-captur.png",
   },
   {
     title: "AI Content Generator",
     desc: "Create high-converting ads, landing pages, and messages in seconds — no copywriting needed.",
-    img: "https://res.cloudinary.com/djipgt6vc/image/upload/v1775477196/AI-Content-creations-robo_radj9b.png",
+    img: "/assets/ai-content-creator.png",
   },
   {
     title: "Automated Follow-Ups",
@@ -38,27 +38,27 @@ const cards: Card[] = [
   {
     title: "AI Calling Assistant",
     desc: "Engage leads instantly with automated calls that collect information and qualify prospects.",
-    img: "/assets/img-5.png",
+    img: "/assets/calling-agent-img.png",
   },
   {
     title: "Campaign Automation",
     desc: "Run WhatsApp, email, and SMS campaigns automatically — no manual work required.",
-    img: "/assets/leadai.png",
+    img: "/assets/compaign-automation.png",
   },
   {
     title: "Lead Data Management",
     desc: "Keep all your lead data organized, updated, and ready to act on in one smart dashboard.",
-    img: "/assets/brockerdashai.png",
+    img: "/assets/lead-data-management.png",
   },
   {
     title: "Social Media Automation",
     desc: "Schedule and publish content that attracts leads and grows your online presence.",
-    img: "https://res.cloudinary.com/djipgt6vc/image/upload/v1775477177/marketing-automation-robo_rhqsqs.png",
+    img: "/assets/social-media-automation.png",
   },
   {
     title: "SEO Growth Assistant",
     desc: "Rank higher on search engines and bring in organic leads without extra effort.",
-    img: "/assets/leadai.png",
+    img: "/assets/SEO-Growth.png",
   },
 ]
 

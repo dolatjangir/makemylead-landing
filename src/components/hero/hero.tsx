@@ -99,10 +99,16 @@ function Hero() {
                  <div className="hero-visual relative">
                        <div className="bg-transparent   rounded-3xl   relative z-10 ">
                         <img
-                          src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335519/hero-right-img-estateai_qvw9of.png" 
-                           alt="Modern Luxury Apartment" 
+                          src="/assets/hero-right-img-estateai.png" 
+                           alt="Modern robot image" 
                            
-                           className="rounded-2xl w-full h-full object-cover"
+                           className="rounded-2xl w-full h-full object-cover hidden sm:block"
+                         />
+                            <img
+                          src="/assets/hero-small-sereen.png" 
+                           alt="Modern robot image" 
+                           
+                           className="rounded-2xl w-full h-full object-cover block sm:hidden "
                          />
                       
                        </div>
