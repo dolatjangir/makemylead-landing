@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -23,7 +24,6 @@ import {
   Zap,
   Clock,
   Database,
-
   Award,
   Briefcase,
   ChevronDown,
@@ -34,10 +34,28 @@ import {
   Phone,
   Mail,
   MapPin,
-  Loader2
+  Loader2,
+  Bot,
+  BrainCircuit,
+  Workflow,
+  MessageSquare,
+  PieChart,
+  Fingerprint,
+  Network,
+  FileSearch,
+  Wand2,
+  Gauge,
+  Monitor,
+  Headphones,
+  FileCheck,
+  Landmark,
+  HeartPulse,
+  ShoppingCart,
+  Factory
 } from 'lucide-react';
 
-// Reusable Components (matching your design system)
+/* ─── Reusable Components ─── */
+
 const GlassCard = ({ children, className = "", hover = true, dark = false }: { children: React.ReactNode; className?: string; hover?: boolean; dark?: boolean }) => (
   <div className={`relative overflow-hidden rounded-[var(--radius-3xl)] backdrop-blur-xl border transition-all duration-[var(--duration-normal)] ${
     dark 
@@ -60,7 +78,7 @@ const Badge = ({ children, variant = "primary", size = "md" }: { children: React
     md: "px-3 py-1 text-sm",
     lg: "px-4 py-2 text-base"
   };
-  
+
   const variants = {
     primary: "bg-[var(--color-primary-100)] text-[var(--color-primary-700)] border-[var(--color-primary-200)]",
     secondary: "bg-[var(--color-secondary-100)] text-[var(--color-secondary-700)] border-[var(--color-secondary-200)]",
@@ -68,7 +86,7 @@ const Badge = ({ children, variant = "primary", size = "md" }: { children: React
     warning: "bg-[var(--color-warning-100)] text-[var(--color-warning-700)] border-[var(--color-warning-200)]",
     dark: "bg-[var(--color-neutral-800)] text-white border-[var(--color-neutral-700)]"
   };
-  
+
   return (
     <span className={`inline-flex items-center rounded-full font-semibold border ${sizes[size]} ${variants[variant]}`}>
       {children}
@@ -82,7 +100,7 @@ const FeatureIcon = ({ icon: Icon, gradient = false, size = "lg" }: { icon: any;
     md: "w-12 h-12",
     lg: "w-16 h-16"
   };
-  
+
   return (
     <div className={`${sizes[size]} rounded-[var(--radius-2xl)] flex items-center justify-center ${gradient ? 'bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-secondary-500)] text-white shadow-lg' : 'bg-[var(--color-primary-50)] text-[var(--color-primary-600)]'}`}>
       <Icon className={size === "lg" ? "w-8 h-8" : size === "md" ? "w-6 h-6" : "w-5 h-5"} />
@@ -101,16 +119,16 @@ const StatCard = ({ number, label, suffix = "", trend }: { number: string; label
 const EnterpriseFeatureCard = ({ icon: Icon, title, description, features, index }: { icon: any; title: string; description: string; features: string[]; index: number }) => (
   <GlassCard className="p-8 group h-full" hover={true}>
     <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[var(--color-primary-200)] to-[var(--color-secondary-200)] rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity" />
-    
+
     <div className="relative z-10">
       <div className="flex items-start justify-between mb-6">
         <FeatureIcon icon={Icon} gradient={true} />
         <span className="text-6xl font-bold text-[var(--color-primary-100)]">0{index + 1}</span>
       </div>
-      
+
       <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--color-primary-600)] transition-colors">{title}</h3>
       <p className="text-[var(--text-secondary)] mb-6 leading-relaxed">{description}</p>
-      
+
       <ul className="space-y-3">
         {features.map((feature, idx) => (
           <li key={idx} className="flex items-start gap-3">
@@ -129,7 +147,7 @@ const LogoMarquee = ({ logos, direction = "left" }: { logos: string[]; direction
   <div className="relative overflow-hidden py-8">
     <div className={`absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--bg-primary)] to-transparent z-10`} />
     <div className={`absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--bg-primary)] to-transparent z-10`} />
-    
+
     <div className={`flex gap-16 ${direction === "left" ? 'animate-scroll' : 'animate-scroll-reverse'}`}>
       {[...Array(2)].map((_, setIdx) => (
         <div key={setIdx} className="flex gap-16 flex-shrink-0 items-center">
@@ -196,7 +214,6 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsSubmitting(false);
     setSubmitted(true);
@@ -331,49 +348,101 @@ const ContactForm = () => {
   );
 };
 
+/* ─── AI Agent Cards for Hero ─── */
+const AgentCard = ({ icon, title, description, delay }: { icon: string; title: string; description: string; delay: number }) => (
+  <div 
+    className="group relative p-5 rounded-2xl bg-white/60 backdrop-blur-sm border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer"
+    style={{ animationDelay: `${delay}ms` }}
+  >
+    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[var(--color-primary-500)]/5 to-[var(--color-secondary-500)]/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="relative z-10 flex items-start gap-4">
+      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--color-primary-50)] to-[var(--color-secondary-50)] flex items-center justify-center flex-shrink-0 border border-[var(--color-primary-100)] group-hover:border-[var(--color-primary-300)] transition-colors">
+        <img src={icon} alt={title} className="w-10 h-10 object-contain" />
+      </div>
+      <div>
+        <h4 className="font-bold text-[var(--text-primary)] text-sm mb-1 group-hover:text-[var(--color-primary-600)] transition-colors">{title}</h4>
+        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{description}</p>
+      </div>
+    </div>
+  </div>
+);
+
 const EnterpriseLanding = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
-  
+  const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
     setIsVisible(true);
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  /* ─── AI Agents Data ─── */
+  const aiAgents = [
+    {
+      icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335520/img-1_nz99v7.png",
+      title: "AI Lead Qualification Agent",
+      description: "Organize and segment your customer qualification with intelligent scoring"
+    },
+    {
+      icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335520/img-2_l1xdll.png",
+      title: "AI Property Matching Agent",
+      description: "AI-powered property matching that connects buyers with perfect listings"
+    },
+    {
+      icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335520/img-3_scja92.png",
+      title: "Lead Capture Agent",
+      description: "Smart lead capture tracking and forecasting for maximum conversion"
+    },
+    {
+      icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335521/img-4_damgxf.png",
+      title: "AI Content Creation Agent",
+      description: "Generate compelling property descriptions and marketing content automatically"
+    },
+    {
+      icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335553/img-555_kabvyd.png",
+      title: "AI Follow-Up Agent",
+      description: "Automated follow-up sequences that nurture leads until they convert"
+    }
+  ];
 
   const enterpriseFeatures = [
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Bank-grade security with SOC 2 Type II, ISO 27001, and GDPR compliance. Advanced encryption, SSO, and granular permissions.",
+      description: "Bank-grade security with SOC 2 Type II, ISO 27001, and GDPR compliance. Advanced encryption, SSO, and granular permissions for your real estate data.",
       features: ["SOC 2 Type II Certified", "ISO 27001 Compliant", "GDPR Ready", "SSO & SAML 2.0", "Audit Logs", "Data Residency"]
     },
     {
       icon: Server,
       title: "Dedicated Infrastructure",
-      description: "Single-tenant deployment options with dedicated resources, custom SLAs, and priority support channels.",
+      description: "Single-tenant deployment options with dedicated resources, custom SLAs, and priority support channels built for high-volume real estate operations.",
       features: ["Single-Tenant Options", "99.99% Uptime SLA", "Dedicated Support", "Custom Deployment", "Private Cloud", "Edge Computing"]
     },
     {
       icon: Globe,
       title: "Global Scale",
-      description: "Multi-region deployment with automatic failover, CDN integration, and compliance with local data regulations.",
+      description: "Multi-region deployment with automatic failover, CDN integration, and compliance with local data regulations across all your markets.",
       features: ["Multi-Region", "Auto Failover", "Global CDN", "Local Compliance", "Edge Locations", "Load Balancing"]
     },
     {
       icon: Cpu,
       title: "Advanced Integrations",
-      description: "Connect with your existing enterprise stack. Custom API development, webhooks, and legacy system integration.",
+      description: "Connect with your existing real estate stack. Custom API development, webhooks, and legacy system integration for seamless workflows.",
       features: ["Custom APIs", "Legacy Integration", "ERP Connectors", "Webhook Management", "Data Sync", "Middleware"]
     },
     {
       icon: BarChart3,
       title: "Business Intelligence",
-      description: "Advanced analytics, custom reporting, and predictive insights powered by machine learning.",
+      description: "Advanced analytics, custom reporting, and predictive insights powered by machine learning tailored for real estate KPIs.",
       features: ["Custom Dashboards", "Predictive Analytics", "ML Insights", "Data Warehousing", "Real-time Reports", "Export Tools"]
     },
     {
       icon: Users,
       title: "Team Management",
-      description: "Advanced user management, role-based access control, and organizational hierarchy support.",
+      description: "Advanced user management, role-based access control, and organizational hierarchy support for large brokerages and teams.",
       features: ["RBAC", "Org Hierarchy", "Team Analytics", "Approval Workflows", "Department Views", "Custom Roles"]
     }
   ];
@@ -402,171 +471,192 @@ const EnterpriseLanding = () => {
   ];
 
   const securityFeatures = [
-    { icon: Lock, title: "End-to-End Encryption", certification: "AES-256", description: "All data encrypted in transit and at rest with industry-leading standards." },
-    { icon: Shield, title: "Access Control", certification: "SSO", description: "Enterprise-grade identity management with SAML 2.0, OIDC, and MFA." },
-    { icon: Database, title: "Data Privacy", certification: "GDPR", description: "Full compliance with global privacy regulations including GDPR and CCPA." },
-    { icon: Server, title: "Infrastructure", certification: "SOC 2", description: "Regular third-party audits and continuous security monitoring." }
+    { icon: Lock, title: "End-to-End Encryption", certification: "AES-256", description: "All property and client data encrypted in transit and at rest with industry-leading standards." },
+    { icon: Shield, title: "Access Control", certification: "SSO", description: "Enterprise-grade identity management with SAML 2.0, OIDC, and multi-factor authentication." },
+    { icon: Database, title: "Data Privacy", certification: "GDPR", description: "Full compliance with global privacy regulations including GDPR and CCPA for real estate data." },
+    { icon: Server, title: "Infrastructure", certification: "SOC 2", description: "Regular third-party audits and continuous security monitoring for your peace of mind." }
   ];
 
   const tabs = [
-    { title: "Financial Services", content: "Banking-grade security and compliance for financial institutions. Real-time fraud detection and regulatory reporting." },
-    { title: "Healthcare", content: "HIPAA-compliant infrastructure with patient data protection. Integration with EHR systems and secure messaging." },
-    { title: "Manufacturing", content: "Supply chain optimization and IoT integration. Predictive maintenance and quality control automation." },
-    { title: "Retail", content: "Omnichannel customer experience management. Inventory synchronization and personalized marketing at scale." }
+    { title: "Real Estate", content: "Purpose-built CRM for real estate brokerages and property managers. MLS integration, automated listing distribution, and commission tracking at enterprise scale.", icon: Building2 },
+    { title: "Financial Services", content: "Banking-grade security and compliance for mortgage lenders and financial institutions. Real-time fraud detection and regulatory reporting.", icon: Landmark },
+    { title: "Healthcare", content: "HIPAA-compliant infrastructure with patient data protection. Integration with EHR systems and secure messaging for healthcare real estate.", icon: HeartPulse },
+    { title: "Retail", content: "Omnichannel customer experience management for retail property portfolios. Inventory synchronization and personalized marketing at scale.", icon: ShoppingCart },
+    { title: "Manufacturing", content: "Supply chain optimization and IoT integration for industrial real estate. Predictive maintenance and quality control automation.", icon: Factory }
   ];
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] font-sans text-[var(--text-primary)]">
       <Head>
-        <title>Enterprise CRM Solutions | Scale with Confidence | YourCRM</title>
-        <meta name="description" content="Enterprise-grade CRM solutions with dedicated infrastructure, advanced security, and 24/7 support. Scale your business with confidence. SOC 2 Type II certified." />
-        <meta name="keywords" content="enterprise crm, scalable crm, dedicated infrastructure, SOC 2, enterprise security, custom integration" />
-        <meta property="og:title" content="Enterprise CRM Solutions | Scale with Confidence" />
-        <meta property="og:description" content="Enterprise-grade CRM with dedicated infrastructure and 99.99% SLA." />
+        <title>Enterprise AI CRM Solutions | MakeMyLead</title>
+        <meta name="description" content="Enterprise-grade AI CRM solutions with 10 intelligent agents, dedicated infrastructure, advanced security, and 24/7 support. Scale your real estate business with confidence." />
+        <meta name="keywords" content="enterprise crm, ai agents, real estate crm, scalable crm, dedicated infrastructure, SOC 2, enterprise security" />
+        <meta property="og:title" content="Enterprise AI CRM Solutions | MakeMyLead" />
+        <meta property="og:description" content="Enterprise-grade AI CRM with 10 intelligent agents, dedicated infrastructure and 99.99% SLA." />
         <meta property="og:type" content="website" />
       </Head>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      {/* ═══════════════════════════════════════════════════════════
+           HERO SECTION — Centered, Full-Width, No Right Column
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[90vh] flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-50)] via-white to-[var(--color-secondary-50)]" />
-        <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-gradient-to-br from-[var(--color-primary-200)] to-transparent rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/4 animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-gradient-to-tr from-[var(--color-secondary-200)] to-transparent rounded-full blur-3xl opacity-30 translate-y-1/2 -translate-x-1/4" />
-        
+
+        {/* Floating Orbs */}
+        <div 
+          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[var(--color-primary-300)] to-transparent rounded-full blur-3xl opacity-20 animate-pulse"
+          style={{ transform: `translate(${scrollY * 0.02}px, ${scrollY * -0.01}px)` }}
+        />
+        <div 
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-[var(--color-secondary-300)] to-transparent rounded-full blur-3xl opacity-20"
+          style={{ transform: `translate(${scrollY * -0.015}px, ${scrollY * 0.02}px)` }}
+        />
+
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary-100)] text-[var(--color-primary-700)] font-semibold text-sm mb-6 border border-[var(--color-primary-200)]">
-                <Sparkles className="w-4 h-4" />
-                Enterprise-Grade Solutions
-              </div>
-              
-              <h1 className="text-5xl lg:text-7xl font-bold   leading-[1.1] mb-6">
-                Scale With <br />
-                <GradientText>Confidence</GradientText>
-              </h1>
-              
-              <p className="text-xl text-[var(--text-secondary)] mb-8 leading-relaxed max-w-xl">
-                Enterprise CRM infrastructure built for global scale. Dedicated resources, advanced security, and 24/7 white-glove support for organizations that demand excellence.
-              </p>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
 
-              <div className="flex flex-wrap gap-4 mb-12">
-                <Link href="#contact" className="px-8 py-4 bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-secondary-600)] text-white font-bold rounded-full hover:shadow-xl hover:shadow-[var(--color-primary-500)]/30 transition-all hover:-translate-y-1 flex items-center gap-2">
-                  Talk to Sales
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <button className="px-8 py-4 bg-white text-[var(--text-primary)] font-bold rounded-full border-2 border-[var(--border-medium)] hover:border-[var(--color-primary-300)] hover:bg-[var(--color-primary-50)] transition-all flex items-center gap-2">
-                  <Play className="w-5 h-5" />
-                  Watch Demo
-                </button>
-              </div>
+          {/* Badge */}
+          <div className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--color-primary-100)] text-[var(--color-primary-700)] font-semibold text-sm mb-8 border border-[var(--color-primary-200)] shadow-sm transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <Sparkles className="w-4 h-4" />
+            Enterprise AI-Powered CRM
+            <span className="px-2 py-0.5 rounded-full bg-[var(--color-primary-600)] text-white text-xs ml-1">10 Agents</span>
+          </div>
 
-              <div className="flex flex-wrap items-center gap-6">
-                {trustBadges.map((badge, idx) => (
-                  <TrustBadge key={idx} {...badge} />
-                ))}
-              </div>
+          {/* Main Headline */}
+          <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            Supercharge Your Real Estate
+            <br />
+            <GradientText>With 10 AI Agents</GradientText>
+          </h1>
+
+          {/* Subheadline */}
+          <p className={`text-xl md:text-2xl text-[var(--text-secondary)] mb-10 leading-relaxed max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            The only enterprise CRM built exclusively for real estate. 10 intelligent AI agents working 24/7 to qualify leads, match properties, create content, and close more deals — while you focus on relationships.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className={`flex flex-wrap justify-center gap-4 mb-14 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            <Link href="#contact" className="px-8 py-4 bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-secondary-600)] text-white font-bold rounded-full hover:shadow-xl hover:shadow-[var(--color-primary-500)]/30 transition-all hover:-translate-y-1 flex items-center gap-2 text-lg">
+              Talk to Our Team
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <button className="px-8 py-4 bg-white text-[var(--text-primary)] font-bold rounded-full border-2 border-[var(--border-medium)] hover:border-[var(--color-primary-300)] hover:bg-[var(--color-primary-50)] transition-all flex items-center gap-2 text-lg">
+              <Play className="w-5 h-5" />
+              See AI Agents in Action
+            </button>
+          </div>
+
+          {/* Trust Badges Row */}
+          <div className={`flex flex-wrap justify-center gap-4 mb-16 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            {trustBadges.map((badge, idx) => (
+              <TrustBadge key={idx} {...badge} />
+            ))}
+          </div>
+
+          {/* AI Agents Grid — The Visual Centerpiece */}
+          <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className="text-sm text-[var(--text-tertiary)] uppercase tracking-widest font-semibold mb-6">
+              Your AI Agent Workforce
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+              {aiAgents.map((agent, idx) => (
+                <AgentCard key={idx} {...agent} delay={idx * 100} />
+              ))}
             </div>
+          </div>
 
-            <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <GlassCard className="p-8 relative z-10" hover={false}>
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-secondary-600)] text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  Enterprise Suite
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 rounded-[var(--radius-xl)] bg-[var(--bg-secondary)]">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-[var(--color-primary-600)] flex items-center justify-center">
-                        <Building2 className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-semibold">Enterprise Plan</div>
-                        <div className="text-sm text-[var(--text-tertiary)]">Dedicated Infrastructure</div>
-                      </div>
-                    </div>
-                    <Badge variant="success">Active</Badge>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 rounded-[var(--radius-xl)] bg-[var(--color-primary-50)] border border-[var(--color-primary-200)]">
-                      <div className="text-2xl font-bold text-[var(--color-primary-600)]">99.99%</div>
-                      <div className="text-xs text-[var(--text-secondary)]">Uptime SLA</div>
-                    </div>
-                    <div className="p-4 rounded-[var(--radius-xl)] bg-[var(--color-secondary-50)] border border-[var(--color-secondary-200)]">
-                      <div className="text-2xl font-bold text-[var(--color-secondary-600)]">24/7</div>
-                      <div className="text-xs text-[var(--text-secondary)]">Support</div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    {["Unlimited Users", "Custom Integration", "Dedicated Manager", "Priority Support"].map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <Check className="w-5 h-5 text-[var(--color-success-500)]" />
-                        <span className="text-sm font-medium">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <button className="w-full py-3 rounded-[var(--radius-xl)] bg-[var(--bg-dark)] text-white font-semibold hover:bg-[var(--color-neutral-800)] transition-colors">
-                    View Full Features
-                  </button>
-                </div>
-              </GlassCard>
-
-              {/* Floating Elements */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-[var(--radius-2xl)] p-4 shadow-xl border border-[var(--border-light)] z-20">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-success-100)] flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-[var(--color-success-600)]" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold">SOC 2 Certified</div>
-                    <div className="text-xs text-[var(--text-tertiary)]">Type II Compliant</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -top-6 -right-6 bg-white rounded-[var(--radius-2xl)] p-4 shadow-xl border border-[var(--border-light)] z-20">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-[var(--color-primary-100)] flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-[var(--color-primary-600)]" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold">Global CDN</div>
-                    <div className="text-xs text-[var(--text-tertiary)]">50+ Regions</div>
-                  </div>
-                </div>
-              </div>
+          {/* Scroll Indicator */}
+          <div className={`mt-16 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-60' : 'opacity-0'}`}>
+            <div className="w-6 h-10 rounded-full border-2 border-[var(--color-primary-300)] mx-auto flex justify-center pt-2">
+              <div className="w-1.5 h-3 rounded-full bg-[var(--color-primary-500)] animate-bounce" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-[var(--bg-secondary)] border-y border-[var(--border-light)]">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* ═══════════════════════════════════════════════════════════
+           STATS BAR — Full Width Band
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="py-16 bg-gradient-to-r from-[var(--color-primary-600)] to-[var(--color-secondary-700)] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, idx) => (
-              <StatCard key={idx} {...stat} />
+              <div key={idx} className="text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.number}<span className="text-2xl lg:text-3xl">{stat.suffix}</span></div>
+                <div className="text-sm text-[var(--color-primary-100)] font-medium">{stat.label}</div>
+                {stat.trend && <div className="text-xs text-[var(--color-success-300)] mt-1">{stat.trend}</div>}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Logo Marquee */}
-      <section className="py-12 bg-[var(--bg-primary)]">
-        <div className="max-w-7xl mx-auto px-6 mb-8">
-          <p className="text-center text-[var(--text-tertiary)] font-medium uppercase tracking-wider text-sm">Trusted by Industry Leaders</p>
+      {/* ═══════════════════════════════════════════════════════════
+           AI AGENTS SHOWCASE — Expanded Detail Section
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="py-24 bg-[var(--bg-primary)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <Badge variant="secondary">Intelligent Automation</Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mt-4 mb-6 text-[var(--color-primary-700)]">
+              10 AI Agents, <br />
+              <span className="text-[var(--color-primary-600)]">One Powerful Platform</span>
+            </h2>
+            <p className="text-xl text-[var(--text-secondary)]">
+              Each agent is trained specifically for real estate workflows. They work together seamlessly to automate every stage of your sales pipeline.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335520/img-1_nz99v7.png", title: "AI Lead Qualification Agent", desc: "Automatically scores and segments incoming leads based on behavior, demographics, and engagement. Prioritizes hot leads so your team never misses an opportunity.", tags: ["Smart Scoring", "Auto-Segmentation", "Priority Queue"] },
+              { icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335520/img-2_l1xdll.png", title: "AI Property Matching Agent", desc: "Matches buyers with ideal properties using AI-driven preference analysis. Learns from browsing behavior to suggest homes that actually convert.", tags: ["ML Matching", "Preference Learning", "Auto-Recommend"] },
+              { icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335520/img-3_scja92.png", title: "Lead Capture Agent", desc: "Captures leads from every channel — website, social, phone, walk-ins — and enriches them with public data before they hit your pipeline.", tags: ["Multi-Channel", "Data Enrichment", "Instant Capture"] },
+              { icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335521/img-4_damgxf.png", title: "AI Content Creation Agent", desc: "Generates listing descriptions, social posts, email campaigns, and blog content tailored to your brand voice and target audience.", tags: ["Auto-Generate", "Brand Voice", "SEO-Optimized"] },
+              { icon: "https://res.cloudinary.com/djipgt6vc/image/upload/v1774335553/img-555_kabvyd.png", title: "AI Follow-Up Agent", desc: "Never let a lead go cold. Intelligent follow-up sequences adapt based on lead responses, timing, and engagement patterns.", tags: ["Adaptive Sequences", "Smart Timing", "Multi-Channel"] },
+              { icon: Bot, title: "AI Calling Agent", desc: "Makes outbound calls to qualify leads, schedule showings, and gather feedback. Natural voice AI that sounds human and handles objections.", tags: ["Voice AI", "Auto-Dialing", "Call Analytics"] },
+              { icon: Workflow, title: "Campaign Automation Agent", desc: "Designs, launches, and optimizes marketing campaigns across email, SMS, and social. A/B tests automatically to maximize ROI.", tags: ["Auto-Campaigns", "A/B Testing", "ROI Tracking"] },
+              { icon: Database, title: "Data Mining Agent", desc: "Discovers hidden opportunities in your database. Identifies expired listings, price drops, and market trends before competitors.", tags: ["Market Intelligence", "Opportunity Alerts", "Trend Analysis"] },
+              { icon: BarChart3, title: "Analytics & Reporting Agent", desc: "Generates real-time dashboards and reports on team performance, pipeline health, and market insights. Predicts revenue with 95% accuracy.", tags: ["Real-Time Dashboards", "Revenue Forecast", "Team Analytics"] },
+              { icon: Network, title: "Integration Agent", desc: "Connects MakeMyLead with your MLS, CRM, accounting software, and marketing tools. Syncs data bidirectionally in real-time.", tags: ["MLS Sync", "API Bridge", "Real-Time Sync"] }
+            ].map((agent, idx) => (
+              <GlassCard key={idx} className="p-6 group h-full" hover={true}>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[var(--color-primary-200)] to-[var(--color-secondary-200)] rounded-full blur-3xl opacity-10 group-hover:opacity-30 transition-opacity" />
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--color-primary-50)] to-[var(--color-secondary-50)] flex items-center justify-center border border-[var(--color-primary-100)]">
+                      {typeof agent.icon === 'string' ? (
+                        <img src={agent.icon} alt={agent.title} className="w-10 h-10 object-contain" />
+                      ) : (
+                        <agent.icon className="w-7 h-7 text-[var(--color-primary-600)]" />
+                      )}
+                    </div>
+                    <span className="text-5xl font-bold text-[var(--color-primary-100)]">{String(idx + 1).padStart(2, '0')}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--color-primary-600)] transition-colors">{agent.title}</h3>
+                  <p className="text-[var(--text-secondary)] text-sm mb-5 leading-relaxed">{agent.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {agent.tags.map((tag, tidx) => (
+                      <span key={tidx} className="px-2.5 py-1 rounded-full bg-[var(--color-primary-50)] text-[var(--color-primary-700)] text-xs font-semibold border border-[var(--color-primary-100)]">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </GlassCard>
+            ))}
+          </div>
         </div>
-        <LogoMarquee logos={["Fortune 500", "TechCorp", "GlobalBank", "HealthPlus", "RetailMax", "ManufacturePro", "CloudNine", "DataFlow"]} />
       </section>
 
-      {/* Enterprise Features Grid */}
-      <section className="py-24 bg-[var(--bg-primary)]">
+      {/* ═══════════════════════════════════════════════════════════
+           ENTERPRISE FEATURES GRID
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="py-24 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Badge variant="secondary">Enterprise Capabilities</Badge>
@@ -574,7 +664,7 @@ const EnterpriseLanding = () => {
               Built for Scale, <br /><span className="text-[var(--color-primary-600)]">Designed for Security</span>
             </h2>
             <p className="text-xl text-[var(--text-secondary)]">
-              Comprehensive enterprise features that empower your organization to operate at peak efficiency while maintaining the highest security standards.
+              Comprehensive enterprise features that empower your real estate organization to operate at peak efficiency while maintaining the highest security standards.
             </p>
           </div>
 
@@ -586,22 +676,24 @@ const EnterpriseLanding = () => {
         </div>
       </section>
 
-      {/* Security & Compliance */}
+      {/* ═══════════════════════════════════════════════════════════
+           SECURITY & COMPLIANCE — Dark Section
+          ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-gradient-to-br from-[var(--color-neutral-900)] to-[var(--color-primary-900)] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-50" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-primary-500)] rounded-full blur-3xl opacity-20" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--color-secondary-500)] rounded-full blur-3xl opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-primary-500)] rounded-full blur-3xl opacity-15" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--color-secondary-500)] rounded-full blur-3xl opacity-15" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <Badge variant="dark" size="lg">Security First</Badge>
-              <h2 className="text-4xl lg:text-5xl font-bold mt-6 mb-6 ">
+              <h2 className="text-4xl lg:text-5xl font-bold mt-6 mb-6">
                 Enterprise-Grade <br />
                 <span className="text-[var(--color-primary-300)]">Security & Compliance</span>
               </h2>
               <p className="text-xl text-[var(--color-primary-100)] mb-8 leading-relaxed">
-                Your data security is our top priority. We maintain the highest standards of compliance and employ defense-in-depth security strategies.
+                Your client and property data security is our top priority. We maintain the highest standards of compliance and employ defense-in-depth security strategies trusted by the world's largest real estate firms.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -631,13 +723,15 @@ const EnterpriseLanding = () => {
         </div>
       </section>
 
-      {/* Industry Solutions Tabs */}
+      {/* ═══════════════════════════════════════════════════════════
+           INDUSTRY SOLUTIONS — Tabs Section
+          ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-700)]">Industry Solutions</h2>
             <p className="text-xl text-[var(--text-secondary)]">
-              Tailored enterprise solutions designed for the unique challenges of your industry.
+              Tailored enterprise solutions designed for the unique challenges of your industry. From residential brokerages to commercial portfolios.
             </p>
           </div>
 
@@ -653,7 +747,10 @@ const EnterpriseLanding = () => {
                       : 'hover:bg-white/50'
                   }`}
                 >
-                  <div className="font-bold text-lg mb-1">{tab.title}</div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <tab.icon className={`w-5 h-5 ${activeTab === idx ? 'text-[var(--color-primary-600)]' : 'text-[var(--text-tertiary)]'}`} />
+                    <div className={`font-bold text-lg ${activeTab === idx ? 'text-[var(--text-primary)]' : 'text-[var(--text-tertiary)]'}`}>{tab.title}</div>
+                  </div>
                   <div className={`text-sm ${activeTab === idx ? 'text-[var(--text-secondary)]' : 'text-[var(--text-tertiary)]'}`}>
                     Click to explore solutions
                   </div>
@@ -665,14 +762,14 @@ const EnterpriseLanding = () => {
               <GlassCard className="p-8 h-full" hover={false}>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 rounded-[var(--radius-2xl)] bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-secondary-500)] flex items-center justify-center">
-                    <Building2 className="w-8 h-8 text-white" />
+                    {React.createElement(tabs[activeTab].icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold">{tabs[activeTab].title}</h3>
                     <p className="text-[var(--text-secondary)]">Enterprise Solution</p>
                   </div>
                 </div>
-                
+
                 <p className="text-lg text-[var(--text-secondary)] mb-8 leading-relaxed">
                   {tabs[activeTab].content}
                 </p>
@@ -695,21 +792,23 @@ const EnterpriseLanding = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
+      {/* ═══════════════════════════════════════════════════════════
+           COMPARISON TABLE
+          ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-[var(--bg-primary)]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-700)]">Why Enterprises Choose Us</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-700)]">Why Enterprises Choose MakeMyLead</h2>
             <p className="text-xl text-[var(--text-secondary)]">
-              See how our enterprise offering compares to standard solutions.
+              See how our enterprise offering compares to standard CRM solutions.
             </p>
           </div>
 
           <div className="bg-white rounded-[var(--radius-3xl)] shadow-xl border border-[var(--border-light)] overflow-hidden">
             <div className="grid grid-cols-3 gap-4 p-6 bg-[var(--bg-secondary)] border-b border-[var(--border-light)] font-bold">
               <div>Feature</div>
-              <div className="text-[var(--text-tertiary)]">Others</div>
-              <div className="text-[var(--color-primary-600)]">YourCRM Enterprise</div>
+              <div className="text-[var(--text-tertiary)]">Standard CRMs</div>
+              <div className="text-[var(--color-primary-600)]">MakeMyLead Enterprise</div>
             </div>
             <div className="p-2">
               {comparisonFeatures.map((item, idx) => (
@@ -728,28 +827,31 @@ const EnterpriseLanding = () => {
         </div>
       </section>
 
-      {/* Implementation Timeline */}
+      {/* ═══════════════════════════════════════════════════════════
+           IMPLEMENTATION TIMELINE
+          ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-primary-700)]">Implementation Process</h2>
             <p className="text-xl text-[var(--text-secondary)]">
-              White-glove onboarding and implementation tailored to your enterprise needs.
+              White-glove onboarding and implementation tailored to your enterprise real estate needs. From discovery to go-live in weeks, not months.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Discovery", desc: "Requirements gathering and solution design", icon: Target },
-              { step: "02", title: "Setup", desc: "Infrastructure provisioning and configuration", icon: Settings },
-              { step: "03", title: "Integration", desc: "System connections and data migration", icon: Layers },
-              { step: "04", title: "Launch", desc: "Go-live support and team training", icon: Rocket }
+              { step: "01", title: "Discovery", desc: "Requirements gathering and solution design with your team", icon: Target },
+              { step: "02", title: "Setup", desc: "Infrastructure provisioning and AI agent configuration", icon: Settings },
+              { step: "03", title: "Integration", desc: "MLS, CRM, and marketing tool connections with data migration", icon: Layers },
+              { step: "04", title: "Launch", desc: "Go-live support, team training, and optimization", icon: Rocket }
             ].map((item, idx) => (
               <div key={idx} className="relative">
                 <GlassCard className="p-6 text-center h-full">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-secondary-500)] flex items-center justify-center text-white text-2xl font-bold">
-                    {item.step}
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-secondary-500)] flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                    <item.icon className="w-7 h-7" />
                   </div>
+                  <div className="text-3xl font-bold text-[var(--color-primary-200)] mb-2">{item.step}</div>
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-sm text-[var(--text-secondary)]">{item.desc}</p>
                 </GlassCard>
@@ -764,7 +866,52 @@ const EnterpriseLanding = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* ═══════════════════════════════════════════════════════════
+           TESTIMONIALS / SOCIAL PROOF
+          ═══════════════════════════════════════════════════════════ */}
+      <section className="py-24 bg-[var(--bg-primary)]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <Badge variant="success">Trusted by Leaders</Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mt-4 mb-6 text-[var(--color-primary-700)]">
+              Loved by Top Real Estate Teams
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { quote: "MakeMyLead's AI agents handle 80% of our lead qualification automatically. Our agents now focus on closing deals instead of chasing cold leads.", author: "Sarah Mitchell", role: "VP of Sales, Metro Realty Group", metric: "80% automation" },
+              { quote: "The Property Matching Agent increased our showing-to-offer ratio by 40%. Buyers get matched with homes they actually want to see.", author: "James Chen", role: "Broker Owner, Chen & Associates", metric: "40% better match rate" },
+              { quote: "We migrated 500+ agents to MakeMyLead Enterprise in under 3 weeks. The white-glove support made it feel effortless.", author: "Maria Rodriguez", role: "CTO, Pacific Coast Properties", metric: "500+ agents onboarded" }
+            ].map((testimonial, idx) => (
+              <GlassCard key={idx} className="p-8" hover={true}>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
+                  ))}
+                </div>
+                <p className="text-[var(--text-secondary)] mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-primary-500)] to-[var(--color-secondary-500)] flex items-center justify-center text-white font-bold">
+                    {testimonial.author.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div>
+                    <div className="font-bold text-sm">{testimonial.author}</div>
+                    <div className="text-xs text-[var(--text-tertiary)]">{testimonial.role}</div>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-[var(--border-light)]">
+                  <span className="text-sm font-bold text-[var(--color-primary-600)]">{testimonial.metric}</span>
+                </div>
+              </GlassCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════
+           CONTACT SECTION
+          ═══════════════════════════════════════════════════════════ */}
       <section id="contact" className="py-24 bg-[var(--bg-primary)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
@@ -775,7 +922,7 @@ const EnterpriseLanding = () => {
                 <GradientText>Enterprise Needs</GradientText>
               </h2>
               <p className="text-xl text-[var(--text-secondary)] mb-8">
-                Speak with our enterprise team to design a custom solution for your organization.
+                Speak with our enterprise team to design a custom AI-powered solution for your real estate organization. Get a personalized demo of all 10 AI agents.
               </p>
 
               <div className="space-y-6 mb-12">
@@ -785,7 +932,7 @@ const EnterpriseLanding = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Call Us</div>
-                    <div className="text-[var(--text-secondary)]">+1 (800) 555-ENTERPRISE</div>
+                    <div className="text-[var(--text-secondary)]">+1 (800) 555-LEADS</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -794,7 +941,7 @@ const EnterpriseLanding = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Email Us</div>
-                    <div className="text-[var(--text-secondary)]">enterprise@yourcrm.com</div>
+                    <div className="text-[var(--text-secondary)]">enterprise@makemylead.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -811,19 +958,24 @@ const EnterpriseLanding = () => {
               <div className="p-6 rounded-[var(--radius-2xl)] bg-[var(--bg-secondary)] border border-[var(--border-light)]">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-[var(--color-primary-600)] flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
+                    <Headphones className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-bold">Dedicated Enterprise Team</div>
                     <div className="text-sm text-[var(--text-secondary)]">Average response time: 15 minutes</div>
                   </div>
                 </div>
+                <div className="flex items-center gap-2 text-sm text-[var(--color-success-600)]">
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-success-500)] animate-pulse" />
+                  Available now — 3 specialists online
+                </div>
               </div>
             </div>
 
             <div>
               <GlassCard className="p-8" hover={false}>
-                <h3 className="text-2xl font-bold mb-6">Request Consultation</h3>
+                <h3 className="text-2xl font-bold mb-2">Request Consultation</h3>
+                <p className="text-sm text-[var(--text-secondary)] mb-6">Get a personalized demo tailored to your business size and needs.</p>
                 <ContactForm />
               </GlassCard>
             </div>
@@ -831,47 +983,56 @@ const EnterpriseLanding = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* ═══════════════════════════════════════════════════════════
+           FINAL CTA
+          ═══════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-gradient-to-br from-[var(--color-primary-600)] to-[var(--color-secondary-700)] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-50" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6 ">
-            Ready to Scale?
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white font-semibold text-sm mb-8 border border-white/30">
+            <Bot className="w-4 h-4" />
+            10 AI Agents Ready to Work for You
+          </div>
+
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            Ready to Transform Your Real Estate Business?
           </h2>
           <p className="text-xl text-[var(--color-primary-100)] mb-10 max-w-2xl mx-auto">
-            Join thousands of enterprise organizations that trust YourCRM for their mission-critical operations.
+            Join thousands of real estate professionals who use MakeMyLead's AI agents to close more deals, save time, and grow their business.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="#contact" className="px-8 py-4 bg-white text-[var(--color-primary-600)] font-bold rounded-full hover:shadow-xl transition-all hover:-translate-y-1">
-              Contact Sales
+            <Link href="#contact" className="px-8 py-4 bg-white text-[var(--color-primary-600)] font-bold rounded-full hover:shadow-xl transition-all hover:-translate-y-1 text-lg">
+              Start Your Free Trial
             </Link>
-            <button className="px-8 py-4 bg-transparent text-white font-bold rounded-full border-2 border-white hover:bg-white/10 transition-all">
-              View Documentation
+            <button className="px-8 py-4 bg-transparent text-white font-bold rounded-full border-2 border-white hover:bg-white/10 transition-all text-lg">
+              View Pricing
             </button>
           </div>
 
           <div className="mt-12 flex items-center justify-center gap-8 text-sm text-[var(--color-primary-100)]">
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
-              Free consultation
+              Free 14-day trial
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
-              Custom quote
+              No credit card required
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5" />
-              No commitment
+              Full access to all 10 agents
             </div>
           </div>
         </div>
       </section>
 
-      {/* Additional CSS for animations */}
+      {/* ═══════════════════════════════════════════════════════════
+           ANIMATIONS (Tailwind-compatible)
+          ═══════════════════════════════════════════════════════════ */}
       <style jsx global>{`
         @keyframes scroll {
           0% { transform: translateX(0); }

@@ -45,10 +45,10 @@ export default function SEOLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[url(/assets/seo-login-background-Image.png)] bg-cover bg-no-repeat flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[url(https://res.cloudinary.com/djipgt6vc/image/upload/v1778580836/seo-login-background-image_nslx6a.png)] bg-cover bg-no-repeat flex items-center justify-center p-4">
       <a href='/'>
       <div className='absolute left-4 top-4 hidden sm:block'>
-        <img width={200} height={200} src="/assets/estateai.png"/>
+        <img width={200} height={200} src="/assets/makemylead-logo.png"/>
       </div></a>
       <div className="w-full max-w-md">
         
@@ -57,7 +57,7 @@ export default function SEOLoginPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-[#0066cc] rounded-2xl mb-4 shadow-lg shadow-blue-500/25">
             <Lock className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-slate-900">EstateAI SEO Manager</h1>
+          <h1 className="text-2xl font-bold text-slate-900"> SEO Manager</h1>
           <p className="text-slate-600 mt-2">Restricted Access. Please authenticate.</p>
         </div>
 
@@ -83,7 +83,7 @@ export default function SEOLoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0066cc] focus:border-transparent transition-all"
-                  placeholder="admin@estateai.com"
+                  placeholder="admin@makemyleads.com"
                 />
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function SEOLoginPage() {
             href="/" 
             className="text-sm text-slate-500 hover:text-[#0066cc] transition-colors"
           >
-            ← Back to EstateAI Home
+            ← Back to makemylead Home
           </a>
         </div>
       </div>

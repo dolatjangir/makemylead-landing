@@ -178,8 +178,8 @@ function PreviewPanel({
                 <Search className="w-4 h-4 text-slate-400" />
               </div>
               <div className="min-w-0">
-                <p className="text-xs text-slate-800 font-medium">EstateAI</p>
-                <p className="text-xs text-green-700 truncate">{formData.canonicalUrl || 'https://estateai.com'}{formData.url}</p>
+                <p className="text-xs text-slate-800 font-medium">MakeMyLeads</p>
+                <p className="text-xs text-green-700 truncate">{formData.canonicalUrl || 'https://makemyleads.com'}{formData.url}</p>
               </div>
             </div>
             <h5 className="text-[#1a0dab] text-base font-medium mb-1 hover:underline cursor-pointer line-clamp-1">
@@ -205,7 +205,7 @@ function PreviewPanel({
               )}
             </div>
             <div className="p-3 bg-[#f0f2f5]">
-              <p className="text-xs text-slate-500 uppercase mb-1">ESTATEAI.COM</p>
+              <p className="text-xs text-slate-500 uppercase mb-1">MakeMyLeads.com</p>
               <h5 className="text-sm font-semibold text-slate-900 line-clamp-1 mb-1">
                 {formData.ogTitle || formData.metaTitle || 'Page Title'}
               </h5>
@@ -237,7 +237,7 @@ function PreviewPanel({
                 {formData.twitterDescription || formData.metaDescription || 'Description will appear here...'}
               </p>
               <p className="text-xs text-slate-400 flex items-center gap-1">
-                <Globe className="w-3 h-3" /> estateai.com
+                <Globe className="w-3 h-3" /> makemyleads.com
               </p>
             </div>
           </div>
@@ -553,7 +553,7 @@ useEffect(() => {
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-[var(--color-primary-900)] truncate">Admin User</p>
-        <p className="text-xs text-[var(--color-primary-600)] truncate">admin@estateai.com</p>
+        <p className="text-xs text-[var(--color-primary-600)] truncate">admin@makemyleads.com</p>
       </div>
     </div>
   );
@@ -580,7 +580,7 @@ useEffect(() => {
               <Zap className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-lg text-[var(--color-primary-900)]">EstateAI</h1>
+              <h1 className="font-bold text-lg text-[var(--color-primary-900)]">MakeMyLeads</h1>
               <p className="text-xs text-[var(--color-primary-600)]">Admin Dashboard</p>
             </div>
           </div>
@@ -604,7 +604,7 @@ useEffect(() => {
               <Zap className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-xl text-[var(--color-primary-900)]">EstateAI</h1>
+              <h1 className="font-bold text-xl text-[var(--color-primary-900)]">MakeMyLeads</h1>
               <p className="text-xs text-[var(--color-primary-600)]">Admin Dashboard</p>
             </div>
           </div>
@@ -958,7 +958,7 @@ useEffect(() => {
                       <label className="block text-sm font-medium text-slate-700 mb-1.5">Canonical URL</label>
                       <input type="text" value={formData.canonicalUrl || ''} onChange={(e) => handleInputChange('canonicalUrl', e.target.value)}
                         className="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-500)] transition-all"
-                        placeholder="https://estateai.com/page" />
+                        placeholder="https://makemyleads.com/page" />
                     </div>
                   </div>
 

@@ -268,7 +268,72 @@ const navItems: NavItem[] = [
     }
   }
 },
-
+ {
+    label: "industry",
+    href: "#industry",
+    hasDropdown: true,
+    dropdownContent: {
+      title: "Grow with Ai",
+      description: "industry to help you succeed",
+      sections: [
+        {
+          title: "Support",
+          items: [
+            {
+              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335521/how-it-works-icon_ymaoex.png" className="max-w-12 max-h-12" />,
+              title: "Agencies",
+              description: "Guides and API references",
+              href: "/industry/agencies"
+            },
+            {
+              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335509/about-us-icon_rkp7wa.png" className="max-w-12 max-h-12" />,
+              title: "Customer Success",
+              description: "Step-by-step walkthroughs",
+              href: "/industry/customer-sucess"
+            },
+             {
+              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335509/customer-engage-icon_vafyry.png" className="max-w-12 max-h-12" />,
+              title: "Enterprise",
+              description: "FAQs and troubleshooting",
+              href: "/industry/enterprise"
+            },
+          
+          ]
+        },
+        {
+          title: ".",
+          items: [
+         
+            {
+              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335513/community-icon_r7i3kj.png" className="max-w-12 max-h-12" />,
+              title: "Marketing",
+              description: "Join the conversation",
+              href: "/industry/marketing"
+            },
+           
+              {
+              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335509/customer-engage-icon_vafyry.png" className="max-w-12 max-h-12" />,
+              title: "Sales Team",
+              description: "make a best position",
+              href: "/industry/sales-team"
+            },
+         {
+              icon: <img src="https://res.cloudinary.com/djipgt6vc/image/upload/v1774335509/customer-engage-icon_vafyry.png" className="max-w-12 max-h-12" />,
+              title: "StartUp",
+              description: "FAQs and troubleshooting",
+              href: "/industry/startup"
+            },
+           
+          ]
+        }
+      ],
+      footer: {
+        text: "Need personalized help?",
+        link: "Book a Demo →",
+        href: "/book-demo"
+      }
+    }
+  },
   {
     label: "Resources",
     href: "#resources",
